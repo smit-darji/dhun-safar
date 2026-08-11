@@ -12,14 +12,15 @@ function getAudioContext() {
   return audioCtx;
 }
 
-// 1. Truck Horn - Real Indian Truck Air Horn Audio (/sounds/horn.mp3)
+// 1. Truck Horn - Real Indian Truck Air Horn Audio (/horn.mp3)
 export function playTruckHorn() {
   try {
-    const hornAudio = new Audio('/sounds/horn.mp3');
-    hornAudio.volume = 0.9;
+    const hornAudio = new Audio('/horn.mp3');
+    hornAudio.volume = 0.95;
     hornAudio.play().catch((err) => {
-      console.log('Truck horn audio play error, falling back to synth tune:', err);
-      playTruckHornSynth();
+      console.log('Truck horn audio play fallback to /sounds/horn.mp3:', err);
+      const fallbackAudio = new Audio('/sounds/horn.mp3');
+      fallbackAudio.play().catch(() => playTruckHornSynth());
     });
   } catch (e) {
     playTruckHornSynth();
