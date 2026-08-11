@@ -1,4 +1,4 @@
-// Dhun Safar - Web Audio API Synthesizer with Iconic Dhoom Movie Tune, Barber Scissors & Theme Sound Effects
+// Dhun Safar - Audio Player & Web Audio API Synthesizers
 
 let audioCtx = null;
 
@@ -12,17 +12,31 @@ function getAudioContext() {
   return audioCtx;
 }
 
-// 1. Truck Horn - Iconic Dhoom Movie Bike / Horn Tune Synth (Dhoom Machale Dhoom!)
+// 1. Truck Horn - Real Indian Truck Air Horn Audio (/sounds/horn.mp3)
 export function playTruckHorn() {
+  try {
+    const hornAudio = new Audio('/sounds/horn.mp3');
+    hornAudio.volume = 0.9;
+    hornAudio.play().catch((err) => {
+      console.log('Truck horn audio play error, falling back to synth tune:', err);
+      playTruckHornSynth();
+    });
+  } catch (e) {
+    playTruckHornSynth();
+  }
+}
+
+// Fallback Synth for Dhoom Bike / Horn Tune
+function playTruckHornSynth() {
   const ctx = getAudioContext();
   const now = ctx.currentTime;
 
   const notes = [
-    { freq: 349.23, duration: 0.18 }, // Dhoom
-    { freq: 392.00, duration: 0.18 }, // Ma-
-    { freq: 415.30, duration: 0.22 }, // -cha-
-    { freq: 523.25, duration: 0.35 }, // -le!
-    { freq: 466.16, duration: 0.18 }, 
+    { freq: 349.23, duration: 0.18 },
+    { freq: 392.00, duration: 0.18 },
+    { freq: 415.30, duration: 0.22 },
+    { freq: 523.25, duration: 0.35 },
+    { freq: 466.16, duration: 0.18 },
     { freq: 415.30, duration: 0.18 },
     { freq: 392.00, duration: 0.40 }
   ];
@@ -63,7 +77,6 @@ export function playSalonScissorsSound() {
   const ctx = getAudioContext();
   const now = ctx.currentTime;
 
-  // Snip 1
   for (let s = 0; s < 3; s++) {
     const t = now + s * 0.12;
 
