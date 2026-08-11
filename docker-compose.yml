@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  dhun-safar-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: dhun_safar_app
+    ports:
+      - "8080:80"
+    restart: always
