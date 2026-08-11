@@ -32,12 +32,12 @@ const CATEGORY_SLOGANS = {
 };
 
 const CATEGORY_LIVE_TELEMETRY = {
-  truck: { min: 730, max: 1480, text: 'on the highway 🚛' },
-  salon: { min: 530, max: 1120, text: 'लाइव ग्राहक डीलक्स सैलून चंपी सीट पर ✂️' },
-  mistry: { min: 420, max: 910, text: 'लाइव कारपेंटर मिस्त्री वर्कशॉप में 🔨' },
-  office: { min: 310, max: 680, text: 'लाइव ऑफिस वर्कर काम में व्यस्त ☕' },
-  peace: { min: 580, max: 1250, text: 'लाइव रूहानी शांति में लीन 🕉️' },
-  travel: { min: 460, max: 1020, text: 'लाइव यात्री रोड ट्रिप सफ़र पर 🛣️' }
+  truck: { min: 14850, max: 48900, text: 'on the highway 🚛' },
+  salon: { min: 11200, max: 36400, text: 'लाइव ग्राहक डीलक्स सैलून सीट पर ✂️' },
+  mistry: { min: 9400, max: 28900, text: 'लाइव कारपेंटर मिस्त्री वर्कशॉप में 🔨' },
+  office: { min: 8200, max: 24500, text: 'लाइव ऑफिस वर्कर काम में व्यस्त ☕' },
+  peace: { min: 16500, max: 52000, text: 'लाइव रूहानी शांति में लीन 🕉️' },
+  travel: { min: 12800, max: 41200, text: 'लाइव यात्री रोड ट्रिप सफ़र पर 🛣️' }
 };
 
 export default function App() {
@@ -50,7 +50,7 @@ export default function App() {
   const [duration, setDuration] = useState(0);
   const [isShuffle, setIsShuffle] = useState(true);
   const [isRepeat, setIsRepeat] = useState(false);
-  const [liveCount, setLiveCount] = useState(731);
+  const [liveCount, setLiveCount] = useState(14850);
   const [clockTime, setClockTime] = useState('7:28 pm');
 
   const audioRef = useRef(null);
@@ -73,7 +73,7 @@ export default function App() {
 
     const interval = setInterval(() => {
       setLiveCount((prev) => {
-        const delta = Math.floor(Math.random() * 11) - 5;
+        const delta = Math.floor(Math.random() * 45) - 20;
         const newCount = prev + delta;
         return Math.max(base.min, Math.min(base.max, newCount));
       });
@@ -249,7 +249,7 @@ export default function App() {
 
         <div className="top-live-telemetry">
           <span className="live-green-dot" />
-          <span>{liveCount} {currentTelemetryInfo.text}</span>
+          <span>{liveCount.toLocaleString('en-US')} {currentTelemetryInfo.text}</span>
         </div>
 
         <div className="top-right-group">
