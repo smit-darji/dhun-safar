@@ -23,7 +23,7 @@ export const CATEGORIES = [
   },
   {
     "id": "mistry",
-    "name": "राजू मिस्त्री (Wooden Workshop)",
+    "name": "मिस्त्री (Wooden Workshop)",
     "domain": "rajumistri.onrender.com",
     "siteUrl": "https://rajumistri.onrender.com",
     "spotifyUrl": "https://open.spotify.com/playlist/2AVjI8Z57bqMJVtU3V9X1Q",

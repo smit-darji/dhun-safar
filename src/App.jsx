@@ -1,477 +1,452 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { CATEGORIES, SONGS } from './data/songs';
-import { 
-  playTruckHorn, 
+import {
+  playTruckHorn,
   playSalonScissorsSound,
-  playMistryCarpenterSound, 
+  playMistryCarpenterSound,
   playRickshawSound,
-  playOfficeSound, 
-  playPeaceBellSound, 
-  playTravelEngineSound 
+  playOfficeSound,
+  playPeaceBellSound,
+  playTravelEngineSound
 } from './utils/hornSound';
-import { 
-  Play, Pause, SkipBack, SkipForward, Shuffle, Repeat, 
-  ExternalLink, ListMusic, Volume2, VolumeX, Search, X, Radio, Scissors, Wrench, Car, Coffee, Bell, Compass, Dices
+import {
+  Play, Pause, SkipBack, SkipForward,
+  ExternalLink, ListMusic, Search, X, Radio, Scissors, Wrench, Car, Coffee, Bell, Compass, Dices,
+  Sun, Moon, Users
 } from 'lucide-react';
 
+/* ─── static data ─────────────────────────────────────────── */
 const CATEGORY_BACKGROUNDS = {
-  truck: '/images/truck_hero.png',
-  salon: '/images/salon_hero.png',
-  mistry: '/images/rajumistri_hero.png',
-  rickshaw: '/images/rickshaw_hero.png',
-  office: '/images/office_hero.png',
-  peace: '/images/peace_hero.png',
-  travel: '/images/travel_hero.png'
-};
-
-const CATEGORY_VIDEOS = {
-  truck: '/videos/truck-driver.mp4',
-  salon: '/videos/barber-styling.mp4',
-  mistry: '/videos/mistry.mp4',
-  rickshaw: '/videos/rickshaw.mp4',
-  office: '/videos/office.mp4',
-  peace: '/videos/tanhai.mp4',
-  travel: '/videos/kerala.mp4'
+  truck:   '/images/truck_hero.png',
+  salon:   '/images/salon_hero.png',
+  mistry:  '/images/rajumistri_hero.png',
+  rickshaw:'/images/rickshaw_hero.png',
+  office:  '/images/office_hero.png',
+  peace:   '/images/peace_hero.png',
+  travel:  '/images/travel_hero.png',
 };
 
 const CATEGORY_SPOTIFY_PLAYLISTS = {
-  truck: '2AVjI8Z57bqMJVtU3V9X1Q',
-  salon: '37i9dQZF1DXdf576x3Zzla', // 90s Bollywood Hits
-  mistry: '37i9dQZF1DX8U7rREVwzsw', // Focus / Instrumental
-  rickshaw: '2AVjI8Z57bqMJVtU3V9X1Q', // Bollywood Retro
-  office: '37i9dQZF1DWWQRwui0EXPn', // Lofi Beats
-  peace: '37i9dQZF1DX65P15Lpldp7', // Sufi Classics
-  travel: '37i9dQZF1DX4Y4jU7CH5tX' // Road Trip
+  truck:   '2AVjI8Z57bqMJVtU3V9X1Q',
+  salon:   '37i9dQZF1DXdf576x3Zzla',
+  mistry:  '37i9dQZF1DX8U7rREVwzsw',
+  rickshaw:'2AVjI8Z57bqMJVtU3V9X1Q',
+  office:  '37i9dQZF1DWWQRwui0EXPn',
+  peace:   '37i9dQZF1DX65P15Lpldp7',
+  travel:  '37i9dQZF1DX4Y4jU7CH5tX',
 };
 
 const CATEGORY_SLOGANS = {
-  truck: 'बुरी नज़र वाले तेरा मुँह काला 🚛 • Horn OK Please Dhaba Special',
-  salon: 'डीलक्स सैलून • 90s बॉलीवुड रेडियो, चंपी मालिश & सीज़र स्निप ✂️',
-  mistry: 'राजू मिस्त्री • मज़दूरों के संग देसी लेबर बीट्स 🏗️',
-  rickshaw: 'मीटर डाउन 🛺 • 90s ऑटो ड्राइवर सिटी हिट्स',
-  office: 'चाय और कोड • डीडलाइन फोकस ☕',
-  peace: 'गंगा तेरा पानी अमृत • रूहानी शांति 🕉️',
-  travel: 'लंबी सड़क • हाइवे Sunset ड्राइव 🛣️'
+  truck:   'बुरी नज़र वाले तेरा मुँह काला 🚛 • Horn OK Please Dhaba Special',
+  salon:   'डीलक्स सैलून • 90s बॉलीवुड रेडियो, चंपी मालिश & सीज़र स्निप ✂️',
+  mistry:  'मिस्त्री • मज़दूरों के संग देसी लेबर बीट्स 🏗️',
+  rickshaw:'मीटर डाउन 🛺 • 90s ऑटो ड्राइवर सिटी हिट्स',
+  office:  'चाय और कोड • डीडलाइन फोकस ☕',
+  peace:   'गंगा तेरा पानी अमृत • रूहानी शांति 🕉️',
+  travel:  'लंबी सड़क • हाइवे Sunset ड्राइव 🛣️',
 };
 
-const CATEGORY_LIVE_TELEMETRY = {
-  truck: { min: 45, max: 120, text: 'हाइवे ड्राइवरों के संग 🚛' },
-  salon: { min: 30, max: 85, text: 'सैलून सीट पर ग्राहकों के संग ✂️' },
-  mistry: { min: 25, max: 70, text: 'मज़दूरों के संग 🏗️' },
-  rickshaw: { min: 40, max: 110, text: 'सवारी के संग 🛺' },
-  office: { min: 15, max: 55, text: 'काम में व्यस्त साथियों के संग ☕' },
-  peace: { min: 50, max: 150, text: 'रूहानी शांति में लीन 🕉️' },
-  travel: { min: 35, max: 95, text: 'यात्रियों के संग \u00A0' }
+const CATEGORY_META = {
+  truck:   { emoji: '🚛', label: 'ट्रक' },
+  salon:   { emoji: '✂️', label: 'सैलून' },
+  mistry:  { emoji: '🏗️', label: 'मिस्त्री' },
+  rickshaw:{ emoji: '🛺', label: 'रिक्शा' },
+  office:  { emoji: '☕', label: 'ऑफिस' },
+  peace:   { emoji: '🕉️', label: 'शांति' },
+  travel:  { emoji: '🛣️', label: 'यात्रा' },
 };
 
+/* ─── unique user ID helpers ──────────────────────────────── */
+function getOrCreateUID() {
+  let uid = localStorage.getItem('dhun-safar-uid');
+  if (!uid) {
+    uid = 'u-' + Math.random().toString(36).slice(2) + Date.now().toString(36);
+    localStorage.setItem('dhun-safar-uid', uid);
+  }
+  return uid;
+}
+
+/* ─── component ───────────────────────────────────────────── */
 export default function App() {
-  const [activeCategory, setActiveCategory] = useState('truck');
+  const [activeCategory, setActiveCategory]   = useState('truck');
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [currentTime, setCurrentTime] = useState(0);
-  const [duration, setDuration] = useState(0);
-  const [isShuffle, setIsShuffle] = useState(true);
-  const [isRepeat, setIsRepeat] = useState(false);
-  const [liveCount, setLiveCount] = useState(65);
-  const [playerMode, setPlayerMode] = useState('library');
-  const [clockTime, setClockTime] = useState('11:43 am');
+  const [isPlaying, setIsPlaying]             = useState(false);
+  const [isDrawerOpen, setIsDrawerOpen]       = useState(false);
+  const [searchQuery, setSearchQuery]         = useState('');
+  const [currentTime, setCurrentTime]         = useState(0);
+  const [duration, setDuration]               = useState(0);
+  const [isShuffle, setIsShuffle]             = useState(true);
+  const [playerMode, setPlayerMode]           = useState('library');
+  const [clockTime, setClockTime]             = useState('');
+  const [colorScheme, setColorScheme]         = useState(() =>
+    localStorage.getItem('dhun-safar-theme') || 'dark'
+  );
+  const [activeTabCount, setActiveTabCount]   = useState(1); // real unique open tabs
 
-  const audioRef = useRef(null);
+  const audioRef    = useRef(null);
+  const myUID       = useRef(getOrCreateUID());
+  const channelRef  = useRef(null);
+  const peersRef    = useRef(new Set()); // track known peers
 
+  /* ── clock ── */
   useEffect(() => {
-    const updateTime = () => {
+    const tick = () => {
       const now = new Date();
-      setClockTime(now.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' }).toLowerCase());
+      setClockTime(now.toLocaleTimeString('hi-IN', { hour: '2-digit', minute: '2-digit' }));
     };
-    updateTime();
-    const interval = setInterval(updateTime, 10000);
-    return () => clearInterval(interval);
+    tick();
+    const id = setInterval(tick, 10_000);
+    return () => clearInterval(id);
   }, []);
 
-  // Update real-time active human visitor count every 1.5 seconds
+  /* ── persist theme ── */
   useEffect(() => {
-    const base = CATEGORY_LIVE_TELEMETRY[activeCategory] || CATEGORY_LIVE_TELEMETRY.truck;
-    const initial = Math.floor(Math.random() * (base.max - base.min + 1)) + base.min;
-    setLiveCount(initial);
+    localStorage.setItem('dhun-safar-theme', colorScheme);
+  }, [colorScheme]);
 
-    const interval = setInterval(() => {
-      setLiveCount((prev) => {
-        const delta = Math.floor(Math.random() * 25) - 10;
-        const newCount = prev + delta;
-        return Math.max(base.min, Math.min(base.max, newCount));
-      });
-    }, 1500);
+  /* ── real unique-tab live count via BroadcastChannel ── */
+  useEffect(() => {
+    const CHANNEL = 'dhun-safar-live';
+    const uid = myUID.current;
 
-    return () => clearInterval(interval);
-  }, [activeCategory]);
+    // Announce presence + ask others to reply
+    const announce = (type) => {
+      try { channelRef.current?.postMessage({ type, uid }); } catch (_) {}
+    };
 
-  const activeCatMeta = CATEGORIES.find((c) => c.id === activeCategory) || CATEGORIES[0];
+    const bc = new BroadcastChannel(CHANNEL);
+    channelRef.current = bc;
+    peersRef.current = new Set();
 
+    bc.onmessage = (e) => {
+      const { type, uid: fromUID } = e.data || {};
+      if (!fromUID || fromUID === uid) return;
+
+      if (type === 'hello' || type === 'ping') {
+        // someone new joined or pinged — add and reply
+        peersRef.current.add(fromUID);
+        setActiveTabCount(peersRef.current.size + 1); // +1 = me
+        announce('pong');
+      } else if (type === 'pong') {
+        peersRef.current.add(fromUID);
+        setActiveTabCount(peersRef.current.size + 1);
+      } else if (type === 'bye') {
+        peersRef.current.delete(fromUID);
+        setActiveTabCount(peersRef.current.size + 1);
+      }
+    };
+
+    // Announce myself
+    announce('hello');
+
+    // Periodic ping to discover peers & prune stale ones
+    const pingId = setInterval(() => {
+      announce('ping');
+    }, 8_000);
+
+    // On page hide/unload, tell others we're gone
+    const handleHide = () => announce('bye');
+    window.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'hidden') announce('bye');
+      else announce('hello');
+    });
+    window.addEventListener('pagehide', handleHide);
+    window.addEventListener('beforeunload', handleHide);
+
+    return () => {
+      announce('bye');
+      clearInterval(pingId);
+      bc.close();
+      window.removeEventListener('pagehide', handleHide);
+      window.removeEventListener('beforeunload', handleHide);
+    };
+  }, []);
+
+  /* ── category / song logic ── */
   const filteredSongs = SONGS.filter((s) => {
-    const matchesCat = activeCategory === 'all' || s.category === activeCategory;
+    const matchesCat    = activeCategory === 'all' || s.category === activeCategory;
     const matchesSearch = s.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           s.artist.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCat && matchesSearch;
   });
 
   const currentSong = filteredSongs[currentSongIndex] || SONGS[0];
+  const activeCatMeta = CATEGORIES.find((c) => c.id === activeCategory) || CATEGORIES[0];
 
+  /* ── audio playback ── */
   useEffect(() => {
     if (!audioRef.current) return;
     if (playerMode === 'library' && isPlaying) {
-      const playPromise = audioRef.current.play();
-      if (playPromise !== undefined) {
-        playPromise.catch((e) => console.log('Autoplay:', e));
-      }
+      audioRef.current.play().catch((e) => console.log('Autoplay:', e));
     } else {
       audioRef.current.pause();
     }
   }, [isPlaying, currentSong, playerMode]);
 
-  const handleTimeUpdate = () => {
+  const handleTimeUpdate  = () => {
     if (audioRef.current) {
       setCurrentTime(audioRef.current.currentTime);
       setDuration(audioRef.current.duration || 0);
     }
   };
-
   const handleSeek = (e) => {
-    const newTime = parseFloat(e.target.value);
-    if (audioRef.current) {
-      audioRef.current.currentTime = newTime;
-      setCurrentTime(newTime);
-    }
+    const t = parseFloat(e.target.value);
+    if (audioRef.current) { audioRef.current.currentTime = t; setCurrentTime(t); }
   };
+  const handleSongEnded = () => handleNext();
 
-  const handleSongEnded = () => {
-    if (isRepeat && audioRef.current) {
-      audioRef.current.currentTime = 0;
-      audioRef.current.play();
-    } else {
-      handleNext();
-    }
-  };
-
-  const handleNext = () => {
-    if (filteredSongs.length === 0) return;
-    if (isShuffle) {
-      const randomIndex = Math.floor(Math.random() * filteredSongs.length);
-      setCurrentSongIndex(randomIndex);
-    } else {
-      setCurrentSongIndex((prev) => (prev + 1) % filteredSongs.length);
-    }
+  const handleNext = useCallback(() => {
+    if (!filteredSongs.length) return;
+    setCurrentSongIndex(isShuffle
+      ? Math.floor(Math.random() * filteredSongs.length)
+      : (prev) => (prev + 1) % filteredSongs.length
+    );
     setIsPlaying(true);
-  };
-
-  const handleRandomShuffle = () => {
-    if (filteredSongs.length === 0) return;
-    const randomIndex = Math.floor(Math.random() * filteredSongs.length);
-    setCurrentSongIndex(randomIndex);
-    setIsPlaying(true);
-  };
+  }, [filteredSongs, isShuffle]);
 
   const handlePrev = () => {
-    if (filteredSongs.length === 0) return;
+    if (!filteredSongs.length) return;
     setCurrentSongIndex((prev) => (prev - 1 + filteredSongs.length) % filteredSongs.length);
     setIsPlaying(true);
   };
 
+  const handleRandomShuffle = () => {
+    if (!filteredSongs.length) return;
+    setCurrentSongIndex(Math.floor(Math.random() * filteredSongs.length));
+    setIsPlaying(true);
+  };
+
   const formatTime = (secs) => {
-    if (isNaN(secs) || secs === 0) return '0:00';
-    const m = Math.floor(secs / 60);
-    const s = Math.floor(secs % 60);
-    return `${m}:${s < 10 ? '0' : ''}${s}`;
+    if (!secs || isNaN(secs)) return '0:00';
+    return `${Math.floor(secs / 60)}:${String(Math.floor(secs % 60)).padStart(2, '0')}`;
   };
 
   const handleCategorySwitch = (catId) => {
     setActiveCategory(catId);
     const matching = SONGS.filter((s) => catId === 'all' || s.category === catId);
-    if (matching.length > 0) {
-      const randomIndex = Math.floor(Math.random() * matching.length);
-      setCurrentSongIndex(randomIndex);
-    } else {
-      setCurrentSongIndex(0);
-    }
+    setCurrentSongIndex(matching.length > 0 ? Math.floor(Math.random() * matching.length) : 0);
   };
 
+  /* ── sound FX ── */
   const handleHornClick = () => {
-    switch (activeCategory) {
-      case 'truck': playTruckHorn(); break;
-      case 'salon': playSalonScissorsSound(); break;
-      case 'mistry': playMistryCarpenterSound(); break;
-      case 'rickshaw': playRickshawSound(); break;
-      case 'office': playOfficeSound(); break;
-      case 'peace': playPeaceBellSound(); break;
-      case 'travel': playTravelEngineSound(); break;
-      default: playTruckHorn(); break;
-    }
+    const map = { truck: playTruckHorn, salon: playSalonScissorsSound, mistry: playMistryCarpenterSound,
+                  rickshaw: playRickshawSound, office: playOfficeSound, peace: playPeaceBellSound, travel: playTravelEngineSound };
+    (map[activeCategory] || playTruckHorn)();
   };
 
   const getActionBtnData = () => {
-    switch (activeCategory) {
-      case 'truck':
-        return { Icon: Radio, main: 'हॉर्न ओके प्लीज़', sub: 'Horn ok pleaseeee 🎺' };
-      case 'salon':
-        return { Icon: Scissors, main: 'सीज़र स्निप-स्निप', sub: 'सैलून कैंची & चंपी ✂️' };
-      case 'mistry':
-        return { Icon: Wrench, main: 'राजू मिस्त्री औजार', sub: 'मज़दूर मिस्त्री बीट्स 🏗️' };
-      case 'rickshaw':
-        return { Icon: Car, main: 'मीटर डाउन', sub: 'ऑटो रिक्शा पू-पू! 🛺' };
-      case 'office':
-        return { Icon: Coffee, main: 'कॉफी & किबोर्ड', sub: 'फोकस चाय घूंट ☕' };
-      case 'peace':
-        return { Icon: Bell, main: 'मंदिर घंटी & ॐ', sub: 'मंदिर शंख ध्वनि 🔔' };
-      case 'travel':
-        return { Icon: Compass, main: 'गाड़ी इग्निशन', sub: 'टर्बो इंजन रेव 🚗' };
-      default:
-        return { Icon: Radio, main: 'हॉर्न ओके प्लीज़', sub: 'Horn ok pleaseeee 🎺' };
-    }
+    const map = {
+      truck:   { Icon: Radio,   main: 'हॉर्न ओके प्लीज़', sub: 'Horn OK please 🎺' },
+      salon:   { Icon: Scissors,main: 'सीज़र स्निप-स्निप', sub: 'सैलून कैंची & चंपी ✂️' },
+      mistry:  { Icon: Wrench,  main: 'मिस्त्री औजार', sub: 'मज़दूर बीट्स 🏗️' },
+      rickshaw:{ Icon: Car,     main: 'मीटर डाउन', sub: 'ऑटो रिक्शा पू-पू 🛺' },
+      office:  { Icon: Coffee,  main: 'कॉफी & किबोर्ड', sub: 'फोकस चाय ☕' },
+      peace:   { Icon: Bell,    main: 'मंदिर घंटी & ॐ', sub: 'शंख ध्वनि 🔔' },
+      travel:  { Icon: Compass, main: 'गाड़ी इग्निशन', sub: 'इंजन रेव 🚗' },
+    };
+    return map[activeCategory] || map.truck;
   };
 
-  const getCategoryTitleHindi = () => {
-    switch (activeCategory) {
-      case 'truck': return 'ट्रक ड्राइवर';
-      case 'mistry': return 'राजू मिस्त्री';
-      case 'salon': return 'डीलक्स सैलून';
-      case 'rickshaw': return 'ऑटो रिक्शा';
-      case 'office': return 'ऑफिस चाय';
-      case 'peace': return 'रूहानी यादें';
-      case 'travel': return 'रोड ट्रिप सफ़र';
-      default: return 'ट्रक ड्राइवर';
-    }
+  const getCategoryTitle = () => {
+    const map = { truck:'ट्रक ड्राइवर', mistry:'मिस्त्री', salon:'डीलक्स सैलून',
+                  rickshaw:'ऑटो रिक्शा', office:'ऑफिस चाय', peace:'रूहानी यादें', travel:'रोड ट्रिप सफ़र' };
+    return map[activeCategory] || 'ट्रक ड्राइवर';
   };
 
   const actionData = getActionBtnData();
   const ActionIcon = actionData.Icon;
-  const currentTelemetryInfo = CATEGORY_LIVE_TELEMETRY[activeCategory] || CATEGORY_LIVE_TELEMETRY.truck;
-  const currentVideoSrc = CATEGORY_VIDEOS[activeCategory];
+  const isDark = colorScheme === 'dark';
 
-  const handleOpenExternal = (url) => {
-    window.open(url, '_blank', 'noopener,noreferrer');
-  };
+  const openExternal = (url) => window.open(url, '_blank', 'noopener,noreferrer');
 
+  /* ── render ── */
   return (
-    <div className="app-root" data-theme={activeCategory}>
+    <div className="app-root" data-theme={activeCategory} data-color-scheme={colorScheme}>
       <audio
         ref={audioRef}
-        src={currentSong ? currentSong.audioUrl : ''}
+        src={currentSong?.audioUrl || ''}
         onTimeUpdate={handleTimeUpdate}
         onEnded={handleSongEnded}
         preload="metadata"
       />
 
-      {/* Background Image / Video Container */}
-      {activeCategory === 'rickshaw' ? (
-        <div 
-          className="hero-bg-image rickshaw-layout"
-          style={{ backgroundImage: `url(${CATEGORY_BACKGROUNDS.rickshaw})` }}
-        >
-          <div className="rickshaw-windshield-container">
-            <video
-              key={activeCategory}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="rickshaw-windshield-video"
-              src={currentVideoSrc}
-            />
-          </div>
-        </div>
-      ) : currentVideoSrc ? (
-        <video
-          key={activeCategory}
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="hero-bg-video"
-          src={currentVideoSrc}
-        />
-      ) : (
-        <div 
-          className="hero-bg-image" 
-          style={{ backgroundImage: `url(${CATEGORY_BACKGROUNDS[activeCategory] || CATEGORY_BACKGROUNDS.truck})` }}
-        />
-      )}
-      
+      {/* ── Background ── */}
+      <div
+        key={activeCategory}
+        className="hero-bg-image"
+        style={{ backgroundImage: `url(${CATEGORY_BACKGROUNDS[activeCategory] || CATEGORY_BACKGROUNDS.truck})` }}
+      />
       <div className="hero-gradient-overlay" />
 
-      {/* Top Header Bar */}
+      {/* ══════════════════════════════════════════════════════
+          TOP NAV
+      ══════════════════════════════════════════════════════ */}
       <header className="top-nav">
-        <div className="top-time">{clockTime} 🌙</div>
 
-        <div className="top-live-telemetry">
-          <span className="live-green-dot" />
-          <span>• {liveCount.toLocaleString('en-US')} {currentTelemetryInfo.text}</span>
+        {/* Clock */}
+        <div className="top-time">
+          {isDark ? '🌙' : '☀️'} {clockTime}
         </div>
 
-        <div className="top-right-group">
-          {/* External Site Playlist Quick Buttons */}
-          <div style={{ display: 'flex', gap: '0.4rem' }}>
-            <button 
-              className="download-link-btn" 
-              onClick={() => handleOpenExternal(activeCatMeta.spotifyUrl || 'https://open.spotify.com/playlist/2AVjI8Z57bqMJVtU3V9X1Q')}
-              title="ऑफ़िशियल प्लेलिस्ट"
-            >
-              <span>प्लेलिस्ट 🎵</span>
-              <ExternalLink size={12} />
-            </button>
-          </div>
+        {/* Live unique user count */}
+        <div className="top-live-telemetry">
+          <span className="live-green-dot" />
+          <Users size={15} style={{ flexShrink: 0 }} />
+          <span className="live-count-num">{activeTabCount}</span>
+          <span className="live-count-label">लाइव यूज़र</span>
+        </div>
 
-          <div className="category-nav-pills">
-            {CATEGORIES.map((cat) => (
-              <button
-                key={cat.id}
-                className={`nav-pill-btn ${activeCategory === cat.id ? 'pill-active' : ''}`}
-                onClick={() => handleCategorySwitch(cat.id)}
-              >
-                {cat.name.split(' ')[0]}
-              </button>
-            ))}
-          </div>
+        {/* Right group */}
+        <div className="top-right-group">
+
+          {/* Playlist quick link */}
+          <button
+            className="download-link-btn"
+            onClick={() => openExternal(activeCatMeta.spotifyUrl || 'https://open.spotify.com/playlist/2AVjI8Z57bqMJVtU3V9X1Q')}
+            title="ऑफ़िशियल प्लेलिस्ट"
+          >
+            <span>प्लेलिस्ट 🎵</span>
+            <ExternalLink size={13} />
+          </button>
+
+          {/* Dark / Light toggle */}
+          <button
+            className="theme-toggle-btn"
+            onClick={() => setColorScheme(isDark ? 'light' : 'dark')}
+            title={isDark ? 'दिन थीम' : 'रात थीम'}
+            aria-label="theme toggle"
+          >
+            {isDark ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
+
+          {/* Category pills */}
+          <nav className="category-nav-pills" aria-label="श्रेणी चुनें">
+            {CATEGORIES.map((cat) => {
+              const meta = CATEGORY_META[cat.id] || {};
+              return (
+                <button
+                  key={cat.id}
+                  className={`nav-pill-btn ${activeCategory === cat.id ? 'pill-active' : ''}`}
+                  onClick={() => handleCategorySwitch(cat.id)}
+                  title={cat.name}
+                >
+                  <span className="pill-emoji">{meta.emoji}</span>
+                  <span className="pill-label">{meta.label}</span>
+                </button>
+              );
+            })}
+          </nav>
         </div>
       </header>
 
-      {/* Left Edge Floating Sound Action Button */}
+      {/* ══════════════════════════════════════════════════════
+          LEFT SOUND BUTTON
+      ══════════════════════════════════════════════════════ */}
       <button className="left-floating-horn-btn" onClick={handleHornClick}>
-        <ActionIcon className="horn-btn-icon" size={18} />
+        <ActionIcon className="horn-btn-icon" size={22} />
         <div>
           <div className="horn-btn-text-main">{actionData.main}</div>
           <div className="horn-btn-text-sub">{actionData.sub}</div>
         </div>
       </button>
 
-      {/* Center Giant Hindi Title & Slogan */}
+      {/* ══════════════════════════════════════════════════════
+          CENTER HERO
+      ══════════════════════════════════════════════════════ */}
       <main className="hero-center-content">
-        <h1 className="giant-hindi-title">{getCategoryTitleHindi()}</h1>
+        <h1 className="giant-hindi-title">{getCategoryTitle()}</h1>
         <div className="slogan-quote-line">
           <span>{CATEGORY_SLOGANS[activeCategory] || CATEGORY_SLOGANS.truck}</span>
         </div>
       </main>
 
-      {/* Bottom Floating Player Capsule Bar */}
+      {/* ══════════════════════════════════════════════════════
+          BOTTOM PLAYER
+      ══════════════════════════════════════════════════════ */}
       <footer className="bottom-player-area">
         {playerMode === 'spotify' ? (
-          <div className="player-capsule-bar" style={{ padding: '0.4rem', gap: '0.75rem', width: 'min(90%, 650px)', borderRadius: '16px' }}>
+          <div className="player-capsule-bar" style={{ padding: '0.5rem', gap: '0.75rem', borderRadius: '18px' }}>
             <div style={{ flex: 1 }}>
-              <iframe 
-                src={`https://open.spotify.com/embed/playlist/${CATEGORY_SPOTIFY_PLAYLISTS[activeCategory] || '2AVjI8Z57bqMJVtU3V9X1Q'}?utm_source=generator&theme=0`} 
-                width="100%" 
-                height="80" 
-                frameBorder="0" 
-                allowFullScreen="" 
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                loading="lazy"
-                style={{ border: 'none', borderRadius: '12px' }}
+              <iframe
+                src={`https://open.spotify.com/embed/playlist/${CATEGORY_SPOTIFY_PLAYLISTS[activeCategory] || '2AVjI8Z57bqMJVtU3V9X1Q'}?utm_source=generator&theme=0`}
+                width="100%" height="88"
+                frameBorder="0" allowFullScreen
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy" style={{ border: 'none', borderRadius: '12px' }}
               />
             </div>
-            <button 
-              className="capsule-ctrl-btn" 
-              onClick={() => {
-                setPlayerMode('library');
-                setIsPlaying(true);
-              }}
-              title="लाइब्रेरी प्लेयर पर स्विच करें"
-              style={{ background: 'rgba(255, 255, 255, 0.1)', height: '40px', width: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%' }}
+            <button
+              className="capsule-ctrl-btn"
+              onClick={() => { setPlayerMode('library'); setIsPlaying(true); }}
+              title="लाइब्रेरी प्लेयर"
+              style={{ background: 'rgba(255,255,255,0.1)', height: '44px', width: '44px', borderRadius: '50%' }}
             >
-              <ListMusic size={18} />
+              <ListMusic size={20} />
             </button>
           </div>
         ) : (
           <div className="player-capsule-bar">
+            {/* Artwork + info */}
             <div className="player-left-thumb-group">
-              <img 
-                src={currentSong ? currentSong.cover : ''} 
-                alt={currentSong ? currentSong.title : ''} 
-                className={`player-thumb-img ${isPlaying ? 'player-thumb-spinning' : ''}`} 
+              <img
+                src={currentSong?.cover || ''}
+                alt={currentSong?.title || ''}
+                className={`player-thumb-img ${isPlaying ? 'player-thumb-spinning' : ''}`}
               />
               <div className="player-song-details">
-                <div className="player-song-title">{currentSong ? currentSong.title : 'गाना चुनें'}</div>
+                <div className="player-song-title">{currentSong?.title || 'गाना चुनें'}</div>
                 <div className="player-song-artist">{currentSong ? `${currentSong.artist} • ${currentSong.movie}` : ''}</div>
-                <div className="player-time-display">
-                  {formatTime(currentTime)} / {formatTime(duration)}
-                </div>
+                <div className="player-time-display">{formatTime(currentTime)} / {formatTime(duration)}</div>
               </div>
             </div>
 
+            {/* Seek */}
             <input
-              type="range"
-              min="0"
-              max={duration || 100}
-              value={currentTime}
-              onChange={handleSeek}
-              className="seek-slider"
-              style={{ width: '120px' }}
+              type="range" min="0" max={duration || 100} value={currentTime}
+              onChange={handleSeek} className="seek-slider" style={{ width: '130px' }}
             />
 
+            {/* Controls */}
             <div className="player-center-controls">
-              {/* Random Shuffle Button */}
-              <button 
-                className={`capsule-ctrl-btn ${isShuffle ? 'active' : ''}`}
-                onClick={handleRandomShuffle}
-                title="रैंडम शफ़ल गाना चलाएं 🎲"
-              >
-                <Dices size={18} />
+              <button className={`capsule-ctrl-btn ${isShuffle ? 'active' : ''}`} onClick={handleRandomShuffle} title="रैंडम शफ़ल 🎲">
+                <Dices size={20} />
               </button>
-
               <button className="capsule-ctrl-btn" onClick={handlePrev} title="पिछला गाना">
-                <SkipBack size={18} />
+                <SkipBack size={20} />
               </button>
-
-              <button 
-                className="capsule-play-main-btn" 
-                onClick={() => setIsPlaying(!isPlaying)}
-                title={isPlaying ? 'रोकें' : 'चलाएं'}
-              >
-                {isPlaying ? <Pause size={20} /> : <Play size={20} className="ml-0.5" />}
+              <button className="capsule-play-main-btn" onClick={() => setIsPlaying(!isPlaying)} title={isPlaying ? 'रोकें' : 'चलाएं'}>
+                {isPlaying ? <Pause size={22} /> : <Play size={22} style={{ marginLeft: '2px' }} />}
               </button>
-
               <button className="capsule-ctrl-btn" onClick={handleNext} title="अगला गाना">
-                <SkipForward size={18} />
+                <SkipForward size={20} />
               </button>
-
-              {/* Spotify Toggle Button */}
-              <button 
-                className="capsule-ctrl-btn" 
-                onClick={() => {
-                  setIsPlaying(false);
-                  setPlayerMode('spotify');
-                }}
-                title="स्पॉटिफ़ाई प्लेलिस्ट खोलें"
-              >
-                <Radio size={18} />
+              <button className="capsule-ctrl-btn" onClick={() => { setIsPlaying(false); setPlayerMode('spotify'); }} title="स्पॉटिफ़ाई">
+                <Radio size={20} />
               </button>
-
-              <button 
-                className="capsule-ctrl-btn" 
-                onClick={() => setIsDrawerOpen(true)}
-                title="प्लेलिस्ट लाइब्रेरी खोलें"
-              >
-                <ListMusic size={18} />
+              <button className="capsule-ctrl-btn" onClick={() => setIsDrawerOpen(true)} title="प्लेलिस्ट खोलें">
+                <ListMusic size={20} />
               </button>
             </div>
           </div>
         )}
       </footer>
 
-      {/* Playlist Drawer Modal */}
+      {/* ══════════════════════════════════════════════════════
+          PLAYLIST DRAWER
+      ══════════════════════════════════════════════════════ */}
       {isDrawerOpen && (
         <div className="playlist-drawer-backdrop" onClick={() => setIsDrawerOpen(false)}>
           <div className="playlist-drawer-card" onClick={(e) => e.stopPropagation()}>
+
             <div className="drawer-header">
-              <h3 className="font-bold text-lg text-white">
-                {activeCatMeta.name} गोल्डमाइन प्लेलिस्ट ({filteredSongs.length} गाने)
-              </h3>
+              <h3>{activeCatMeta.name} गोल्डमाइन प्लेलिस्ट</h3>
               <button className="drawer-close-btn" onClick={() => setIsDrawerOpen(false)}>
-                <X size={20} />
+                <X size={22} />
               </button>
             </div>
 
             <div className="drawer-search-bar">
-              <Search className="drawer-search-icon" size={16} />
+              <Search className="drawer-search-icon" size={17} />
               <input
                 type="text"
                 placeholder="गाने या गायक का नाम खोजें..."
@@ -488,25 +463,17 @@ export default function App() {
                   <div
                     key={song.id}
                     className={`drawer-song-row ${isCurrent ? 'drawer-row-active' : ''}`}
-                    onClick={() => {
-                      setCurrentSongIndex(idx);
-                      setPlayerMode('library');
-                      setIsPlaying(true);
-                    }}
+                    onClick={() => { setCurrentSongIndex(idx); setPlayerMode('library'); setIsPlaying(true); }}
                   >
                     <img src={song.cover} alt={song.title} className="drawer-thumb" />
-                    <div style={{ flex: 1 }}>
-                      <div className="font-semibold text-sm text-white">{song.title}</div>
-                      <div className="text-xs text-gray-400">{song.artist} • {song.movie}</div>
+                    <div style={{ flex: 1, minWidth: 0 }}>
+                      <div className="drawer-song-title">{song.title}</div>
+                      <div className="drawer-song-sub">{song.artist} • {song.movie}</div>
                     </div>
-
-                    <button 
-                      className="download-link-btn" 
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        handleOpenExternal(song.playlistUrl);
-                      }}
-                      title="यूट्यूब / स्पॉटिफ़ाई प्लेलिस्ट यूआरएल खोलें"
+                    <button
+                      className="download-link-btn"
+                      onClick={(e) => { e.stopPropagation(); openExternal(song.playlistUrl); }}
+                      title="सुनें"
                     >
                       <ExternalLink size={14} />
                       <span>सुनें 🎵</span>
