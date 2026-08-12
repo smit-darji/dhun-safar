@@ -75,6 +75,7 @@ export default function App() {
   const [isShuffle, setIsShuffle] = useState(true);
   const [isRepeat, setIsRepeat] = useState(false);
   const [liveCount, setLiveCount] = useState(65);
+  const [playerMode, setPlayerMode] = useState('library');
   const [clockTime, setClockTime] = useState('11:43 am');
 
   const audioRef = useRef(null);
@@ -119,7 +120,7 @@ export default function App() {
 
   useEffect(() => {
     if (!audioRef.current) return;
-    if (isPlaying) {
+    if (playerMode === 'library' && isPlaying) {
       const playPromise = audioRef.current.play();
       if (playPromise !== undefined) {
         playPromise.catch((e) => console.log('Autoplay:', e));
@@ -127,7 +128,7 @@ export default function App() {
     } else {
       audioRef.current.pause();
     }
-  }, [isPlaying, currentSong]);
+  }, [isPlaying, currentSong, playerMode]);
 
   const handleTimeUpdate = () => {
     if (audioRef.current) {
@@ -253,6 +254,14 @@ export default function App() {
 
   return (
     <div className="app-root" data-theme={activeCategory}>
+      <audio
+        ref={audioRef}
+        src={currentSong ? currentSong.audioUrl : ''}
+        onTimeUpdate={handleTimeUpdate}
+        onEnded={handleSongEnded}
+        preload="metadata"
+      />
+
       {/* Background Image / Video Container */}
       {activeCategory === 'rickshaw' ? (
         <div 
@@ -344,19 +353,108 @@ export default function App() {
       </main>
 
       {/* Bottom Floating Player Capsule Bar */}
-      <footer className="bottom-player-area" style={{ width: 'min(90%, 650px)', margin: '0 auto 2rem auto' }}>
-        <div className="spotify-embed-container">
-          <iframe 
-            src={`https://open.spotify.com/embed/playlist/${CATEGORY_SPOTIFY_PLAYLISTS[activeCategory] || '2AVjI8Z57bqMJVtU3V9X1Q'}?utm_source=generator&theme=0`} 
-            width="100%" 
-            height="80" 
-            frameBorder="0" 
-            allowFullScreen="" 
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-            loading="lazy"
-            style={{ border: 'none' }}
-          />
-        </div>
+      <footer className="bottom-player-area">
+        {playerMode === 'spotify' ? (
+          <div className="player-capsule-bar" style={{ padding: '0.4rem', gap: '0.75rem', width: 'min(90%, 650px)', borderRadius: '16px' }}>
+            <div style={{ flex: 1 }}>
+              <iframe 
+                src={`https://open.spotify.com/embed/playlist/${CATEGORY_SPOTIFY_PLAYLISTS[activeCategory] || '2AVjI8Z57bqMJVtU3V9X1Q'}?utm_source=generator&theme=0`} 
+                width="100%" 
+                height="80" 
+                frameBorder="0" 
+                allowFullScreen="" 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                loading="lazy"
+                style={{ border: 'none', borderRadius: '12px' }}
+              />
+            </div>
+            <button 
+              className="capsule-ctrl-btn" 
+              onClick={() => {
+                setPlayerMode('library');
+                setIsPlaying(true);
+              }}
+              title="लाइब्रेरी प्लेयर पर स्विच करें"
+              style={{ background: 'rgba(255, 255, 255, 0.1)', height: '40px', width: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%' }}
+            >
+              <ListMusic size={18} />
+            </button>
+          </div>
+        ) : (
+          <div className="player-capsule-bar">
+            <div className="player-left-thumb-group">
+              <img 
+                src={currentSong ? currentSong.cover : ''} 
+                alt={currentSong ? currentSong.title : ''} 
+                className={`player-thumb-img ${isPlaying ? 'player-thumb-spinning' : ''}`} 
+              />
+              <div className="player-song-details">
+                <div className="player-song-title">{currentSong ? currentSong.title : 'गाना चुनें'}</div>
+                <div className="player-song-artist">{currentSong ? `${currentSong.artist} • ${currentSong.movie}` : ''}</div>
+                <div className="player-time-display">
+                  {formatTime(currentTime)} / {formatTime(duration)}
+                </div>
+              </div>
+            </div>
+
+            <input
+              type="range"
+              min="0"
+              max={duration || 100}
+              value={currentTime}
+              onChange={handleSeek}
+              className="seek-slider"
+              style={{ width: '120px' }}
+            />
+
+            <div className="player-center-controls">
+              {/* Random Shuffle Button */}
+              <button 
+                className={`capsule-ctrl-btn ${isShuffle ? 'active' : ''}`}
+                onClick={handleRandomShuffle}
+                title="रैंडम शफ़ल गाना चलाएं 🎲"
+              >
+                <Dices size={18} />
+              </button>
+
+              <button className="capsule-ctrl-btn" onClick={handlePrev} title="पिछला गाना">
+                <SkipBack size={18} />
+              </button>
+
+              <button 
+                className="capsule-play-main-btn" 
+                onClick={() => setIsPlaying(!isPlaying)}
+                title={isPlaying ? 'रोकें' : 'चलाएं'}
+              >
+                {isPlaying ? <Pause size={20} /> : <Play size={20} className="ml-0.5" />}
+              </button>
+
+              <button className="capsule-ctrl-btn" onClick={handleNext} title="अगला गाना">
+                <SkipForward size={18} />
+              </button>
+
+              {/* Spotify Toggle Button */}
+              <button 
+                className="capsule-ctrl-btn" 
+                onClick={() => {
+                  setIsPlaying(false);
+                  setPlayerMode('spotify');
+                }}
+                title="स्पॉटिफ़ाई प्लेलिस्ट खोलें"
+              >
+                <Radio size={18} />
+              </button>
+
+              <button 
+                className="capsule-ctrl-btn" 
+                onClick={() => setIsDrawerOpen(true)}
+                title="प्लेलिस्ट लाइब्रेरी खोलें"
+              >
+                <ListMusic size={18} />
+              </button>
+            </div>
+          </div>
+        )}
       </footer>
 
       {/* Playlist Drawer Modal */}
@@ -392,6 +490,7 @@ export default function App() {
                     className={`drawer-song-row ${isCurrent ? 'drawer-row-active' : ''}`}
                     onClick={() => {
                       setCurrentSongIndex(idx);
+                      setPlayerMode('library');
                       setIsPlaying(true);
                     }}
                   >
