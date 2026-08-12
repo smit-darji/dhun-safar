@@ -25,7 +25,17 @@ body {
   overflow: hidden;
 }
 
-/* --- FULLSCREEN RESPONSIVE HERO BACKGROUND --- */
+/* --- FULLSCREEN RESPONSIVE HERO BACKGROUND VIDEO & IMAGE --- */
+.hero-bg-video {
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
 .hero-bg-image {
   position: absolute;
   inset: 0;

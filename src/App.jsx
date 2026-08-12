@@ -24,6 +24,13 @@ const CATEGORY_BACKGROUNDS = {
   travel: '/images/travel_hero.png'
 };
 
+const CATEGORY_VIDEOS = {
+  truck: '/videos/truck-driver.mp4',
+  salon: '/videos/barber-styling.mp4',
+  peace: '/videos/tanhai.mp4',
+  travel: '/videos/kerala.mp4'
+};
+
 const CATEGORY_SLOGANS = {
   truck: 'बुरी नज़र वाले तेरा मुँह काला 🚛 • Horn OK Please Dhaba Special (hornokplease.xyz)',
   salon: 'डीलक्स सैलून • 90s बॉलीवुड रेडियो, चंपी मालिश & सीज़र स्निप ✂️ (saloon.wtf)',
@@ -35,13 +42,13 @@ const CATEGORY_SLOGANS = {
 };
 
 const CATEGORY_LIVE_TELEMETRY = {
-  truck: { min: 24850, max: 58900, text: 'LIVE HUMANS TUNED IN ON THIS WEBSITE 🚛' },
-  salon: { min: 18200, max: 46400, text: 'LIVE HUMANS LISTENING AT SALOON ✂️' },
-  mistry: { min: 14400, max: 38900, text: 'LIVE HUMANS IN CARPENTER WORKSHOP 🔨' },
-  rickshaw: { min: 21900, max: 51200, text: 'LIVE HUMANS IN AUTO RICKSHAW 🛺' },
-  office: { min: 12200, max: 34500, text: 'LIVE HUMANS WORKING & LISTENING ☕' },
-  peace: { min: 26500, max: 62000, text: 'LIVE HUMANS IN SPIRITUAL SUFI PEACE 🕉️' },
-  travel: { min: 19800, max: 49200, text: 'LIVE HUMANS ON HIGHWAY ROAD TRIP 🛣️' }
+  truck: { min: 28450, max: 68900, text: 'LIVE HUMANS TUNED IN ON THIS WEBSITE 🚛' },
+  salon: { min: 21200, max: 54400, text: 'LIVE HUMANS LISTENING AT SALOON ✂️' },
+  mistry: { min: 16400, max: 42900, text: 'LIVE HUMANS IN CARPENTER WORKSHOP 🔨' },
+  rickshaw: { min: 25900, max: 59200, text: 'LIVE HUMANS IN AUTO RICKSHAW 🛺' },
+  office: { min: 14200, max: 39500, text: 'LIVE HUMANS WORKING & LISTENING ☕' },
+  peace: { min: 31500, max: 72000, text: 'LIVE HUMANS IN SPIRITUAL SUFI PEACE 🕉️' },
+  travel: { min: 22800, max: 57200, text: 'LIVE HUMANS ON HIGHWAY ROAD TRIP 🛣️' }
 };
 
 export default function App() {
@@ -54,8 +61,8 @@ export default function App() {
   const [duration, setDuration] = useState(0);
   const [isShuffle, setIsShuffle] = useState(true);
   const [isRepeat, setIsRepeat] = useState(false);
-  const [liveCount, setLiveCount] = useState(24850);
-  const [clockTime, setClockTime] = useState('11:12 am');
+  const [liveCount, setLiveCount] = useState(28450);
+  const [clockTime, setClockTime] = useState('11:18 am');
 
   const audioRef = useRef(null);
 
@@ -223,6 +230,7 @@ export default function App() {
   const actionData = getActionBtnData();
   const ActionIcon = actionData.Icon;
   const currentTelemetryInfo = CATEGORY_LIVE_TELEMETRY[activeCategory] || CATEGORY_LIVE_TELEMETRY.truck;
+  const currentVideoSrc = CATEGORY_VIDEOS[activeCategory];
 
   const handleOpenPlaylistUrl = (e, song) => {
     e.stopPropagation();
@@ -240,11 +248,24 @@ export default function App() {
         preload="metadata"
       />
 
-      {/* Hero Background Image */}
-      <div 
-        className="hero-bg-image" 
-        style={{ backgroundImage: `url(${CATEGORY_BACKGROUNDS[activeCategory] || CATEGORY_BACKGROUNDS.truck})` }}
-      />
+      {/* Live Video or Hero Background Image */}
+      {currentVideoSrc ? (
+        <video
+          key={activeCategory}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="hero-bg-video"
+          src={currentVideoSrc}
+        />
+      ) : (
+        <div 
+          className="hero-bg-image" 
+          style={{ backgroundImage: `url(${CATEGORY_BACKGROUNDS[activeCategory] || CATEGORY_BACKGROUNDS.truck})` }}
+        />
+      )}
+      
       <div className="hero-gradient-overlay" />
 
       {/* Top Header Bar */}
@@ -399,7 +420,7 @@ export default function App() {
                       title="यूट्यूब / स्पॉटिफ़ाई प्लेलिस्ट यूआरएल खोलें"
                     >
                       <ExternalLink size={14} />
-                      <span>प्लेलिस्ट खोलें</span>
+                      <span>प्लेलिस्ट यूआरएल</span>
                     </button>
                   </div>
                 );
