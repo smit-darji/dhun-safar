@@ -4,31 +4,37 @@ export const CATEGORIES = [
   {
     "id": "truck",
     "name": "ट्रक वाला (Truck Driver)",
-    "subtitle": "Highway retro bangers & dhaba vibes",
+    "subtitle": "Highway retro bangers & dhaba vibes • hornokplease.xyz",
     "icon": "Truck"
   },
   {
     "id": "salon",
     "name": "डीलक्स सैलून (Barber Salon)",
-    "subtitle": "90s Bollywood saloon hits, चंपी मालिश & सीज़र रिदम",
+    "subtitle": "90s Bollywood saloon hits & चंपी मालिश • saloon.wtf",
     "icon": "Scissors"
   },
   {
     "id": "mistry",
     "name": "कारपेंटर मिस्त्री (Wooden Workshop)",
-    "subtitle": "Carpenter tools, saw beats & Punjabi energy",
+    "subtitle": "Carpenter tools, saw beats & Raju Mistry hits • rajumistri.onrender.com",
     "icon": "Wrench"
+  },
+  {
+    "id": "rickshaw",
+    "name": "ऑटो रिक्शा (Auto Rickshaw Driver)",
+    "subtitle": "Auto meter, city street beats & 90s nostalgia",
+    "icon": "Car"
   },
   {
     "id": "office",
     "name": "ऑफिस (Corporate / Focus)",
-    "subtitle": "Lofi beats, acoustic & calm study dhun",
+    "subtitle": "Lofi beats, acoustic & chai study dhun",
     "icon": "Briefcase"
   },
   {
     "id": "peace",
     "name": "रूहानी शांति (Peace & Sufi)",
-    "subtitle": "Kun Faya Kun, Ghazals & spiritual chimes",
+    "subtitle": "Kun Faya Kun, Ghazals & spiritual chimes • nostalgiahits.in",
     "icon": "HeartHandshake"
   },
   {
@@ -48,28 +54,28 @@ export const SONGS = [
     "category": "truck",
     "duration": "5:30",
     "audioUrl": "/songs/truck/Ae Kash Ke Hum Full Video - Kabhi Haan Kabhi Naa ｜ Shah Rukh Khan, Suchitra ｜ Kumar Sanu.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=500&q=80",
     "tags": [
       "Truck",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
     "id": "tr-2",
     "title": "Car Nachdi⧸Hornn Blow (Video)",
-    "artist": "Classic Retro Artist",
-    "movie": "Hits Collection",
+    "artist": "Classic 90s Artist",
+    "movie": "Bollywood Gold",
     "category": "truck",
     "duration": "5:30",
     "audioUrl": "/songs/truck/Car Nachdi⧸Hornn Blow (Video) ｜ T-Series Mixtape Punjabi ｜ Gippy Grewal ,Harrdy Sandhu & Neha Kakkar.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=500&q=80",
     "tags": [
       "Truck",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -80,12 +86,12 @@ export const SONGS = [
     "category": "truck",
     "duration": "5:30",
     "audioUrl": "/songs/truck/Chhupana Bhi Nahin Aata Full Video Song ｜ Baazigar ｜ Shahrukh Khan, Kajol ｜ Vinod Rathod.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=500&q=80",
     "tags": [
       "Truck",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -96,12 +102,12 @@ export const SONGS = [
     "category": "truck",
     "duration": "5:30",
     "audioUrl": "/songs/truck/Dil Hai Ki Manta Nahin Full Audio Song (Female Version) ｜ Anuradha Paudwal ｜ Aamir Khan, Pooja Bhatt.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=500&q=80",
     "tags": [
       "Truck",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -112,12 +118,12 @@ export const SONGS = [
     "category": "truck",
     "duration": "5:30",
     "audioUrl": "/songs/truck/Dil Kehta Hai ｜ Akele Hum Akele Tum ｜ Kumar Sanu, Alka Yagnik ｜ Aamir Khan ｜ 90s Love Song.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=500&q=80",
     "tags": [
       "Truck",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -128,12 +134,12 @@ export const SONGS = [
     "category": "truck",
     "duration": "5:30",
     "audioUrl": "/songs/truck/Husn Hai Suhana ｜ Coolie No. 1 ｜ Govinda & Karisma Kapoor ｜ Abhijeet & Chandana Dixit ｜ 90's Hits.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=500&q=80",
     "tags": [
       "Truck",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -144,12 +150,12 @@ export const SONGS = [
     "category": "truck",
     "duration": "5:30",
     "audioUrl": "/songs/truck/Jeeye To Jeeye Kaise -Lyrical ｜ Saajan ｜ Pankaj Udhas ｜ Salman Khan & Madhuri ｜ 90's Hindi Sad Songs.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=500&q=80",
     "tags": [
       "Truck",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -160,28 +166,28 @@ export const SONGS = [
     "category": "truck",
     "duration": "5:30",
     "audioUrl": "/songs/truck/Jhanjharia Lyrical (Male) ｜Krishna ｜ Suniel Shetty, Karisma Kapoor｜Abhijeet Bhattacharya ｜ Anu Malik.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=500&q=80",
     "tags": [
       "Truck",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
     "id": "tr-9",
     "title": "Kumar Sanu & Sadhana Sargam Live Sydney - Teri umeed tera intezar - Deewana",
-    "artist": "Classic Retro Artist",
-    "movie": "Hits Collection",
+    "artist": "Classic 90s Artist",
+    "movie": "Bollywood Gold",
     "category": "truck",
     "duration": "5:30",
     "audioUrl": "/songs/truck/Kumar Sanu & Sadhana Sargam Live Sydney - Teri umeed tera intezar - Deewana.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=500&q=80",
     "tags": [
       "Truck",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -192,12 +198,12 @@ export const SONGS = [
     "category": "truck",
     "duration": "5:30",
     "audioUrl": "/songs/truck/Lyrical： Tumhein Apna Banane Ki Kasam ｜ Sadak ｜ Kumar Sanu,Anuradha Paudwal ｜Sanjay Dutt,Pooja Bhatt.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=500&q=80",
     "tags": [
       "Truck",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -208,12 +214,12 @@ export const SONGS = [
     "category": "truck",
     "duration": "5:30",
     "audioUrl": "/songs/truck/Mujhse Mohabbat Ka Izhaar (HD)｜ Hum Hain Rahi Pyar Ke (1993)｜ Aamir Khan｜ Juhi Chawla｜ Romantic Song.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=500&q=80",
     "tags": [
       "Truck",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -224,12 +230,12 @@ export const SONGS = [
     "category": "truck",
     "duration": "5:30",
     "audioUrl": "/songs/truck/Pehli Pehli Baar Mohabbat Ki Hai Full Video Song ｜ Sirf Tum｜Kumar Sanu,Alka Yagnik｜Sanjay K, Priya G.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=500&q=80",
     "tags": [
       "Truck",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -240,12 +246,12 @@ export const SONGS = [
     "category": "truck",
     "duration": "5:30",
     "audioUrl": "/songs/truck/Raah Mein Unse Mulaqat - Lyrical ｜ Ajay Devgn, Tabu ｜ Kumar Sanu, Alka Yagnik ｜Vijaypath ｜ Anu Malik.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=500&q=80",
     "tags": [
       "Truck",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -256,12 +262,12 @@ export const SONGS = [
     "category": "truck",
     "duration": "5:30",
     "audioUrl": "/songs/truck/Saaton Janam Main Tere Full Lyrical ｜Video Song ｜ Dilwale ｜ Ajay Devgan, Raveena Tandon ｜ Kumar Sanu.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=500&q=80",
     "tags": [
       "Truck",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -272,28 +278,28 @@ export const SONGS = [
     "category": "truck",
     "duration": "5:30",
     "audioUrl": "/songs/truck/Sochenge Tumhe Pyar- Lyrical ｜ #Deewana ｜ #RishiKapoor, Divya Bharti ｜ 90's Best Song.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=500&q=80",
     "tags": [
       "Truck",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
     "id": "tr-16",
     "title": "To Chalun",
-    "artist": "Classic Retro Artist",
-    "movie": "Hits Collection",
+    "artist": "Classic 90s Artist",
+    "movie": "Bollywood Gold",
     "category": "truck",
     "duration": "5:30",
     "audioUrl": "/songs/truck/To Chalun.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=500&q=80",
     "tags": [
       "Truck",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -304,12 +310,12 @@ export const SONGS = [
     "category": "truck",
     "duration": "5:30",
     "audioUrl": "/songs/truck/Tu Jo Hans Hans Ke HD ｜ Govinda, Aarti Chabria ｜Udit Narayan, Kavita Krishnamurthy ｜Raja Bhaiya Song.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=500&q=80",
     "tags": [
       "Truck",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -320,12 +326,12 @@ export const SONGS = [
     "category": "truck",
     "duration": "5:30",
     "audioUrl": "/songs/truck/Tumhein Dekhen Meri Aankhen ｜ Divya Bharti ｜ Kumar Sanu ｜ Alka Yagnik ｜ Rang Song ｜ 90's Sad Song.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=500&q=80",
     "tags": [
       "Truck",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -336,12 +342,12 @@ export const SONGS = [
     "category": "truck",
     "duration": "5:30",
     "audioUrl": "/songs/truck/Tumsa Koi Pyaara ｜ Khuddar ｜ Govinda, Karisma Kapoor ｜ Kumar Sanu, Alka Yagnik ｜Anu Malik, 90s Hits.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=500&q=80",
     "tags": [
       "Truck",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -352,12 +358,12 @@ export const SONGS = [
     "category": "truck",
     "duration": "5:30",
     "audioUrl": "/songs/truck/Waada Raha Sanam -4K ｜ Akshay K & Ayesha J ｜ Alka Y & Abhijeet ｜ Khiladi ｜ 90's Hindi Romantic Songs.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=500&q=80",
     "tags": [
       "Truck",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -368,12 +374,12 @@ export const SONGS = [
     "category": "truck",
     "duration": "5:30",
     "audioUrl": "/songs/truck/Woh Meri Neend Mera Chain Lyrical - Hum Hain Rahi Pyar Ke ｜ Aamir Khan, Juhi Chawla ｜ Sadhana Sargam.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=500&q=80",
     "tags": [
       "Truck",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -384,12 +390,12 @@ export const SONGS = [
     "category": "salon",
     "duration": "5:30",
     "audioUrl": "/songs/salon/Ab Tere Bin Jee Lenge Hum Lyrical Video ｜ Aashiqui ｜ Kumar Sanu ｜ Sameer ｜ Anu Agarwal, Rahul Roy.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500&q=80",
     "tags": [
       "Salon",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -400,28 +406,28 @@ export const SONGS = [
     "category": "salon",
     "duration": "5:30",
     "audioUrl": "/songs/salon/Ae Kash Ke Hum Full Video - Kabhi Haan Kabhi Naa ｜ Shah Rukh Khan, Suchitra ｜ Kumar Sanu.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=500&q=80",
     "tags": [
       "Salon",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
     "id": "sa-24",
     "title": "Bahut Pyar Karte Hain (Male) [Full Song] (HQ) W⧸ Lyrics + English Translation - Saajan",
-    "artist": "Classic Retro Artist",
-    "movie": "Hits Collection",
+    "artist": "Classic 90s Artist",
+    "movie": "Bollywood Gold",
     "category": "salon",
     "duration": "5:30",
     "audioUrl": "/songs/salon/Bahut Pyar Karte Hain (Male) [Full Song] (HQ) W⧸ Lyrics + English Translation - Saajan.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500&q=80",
     "tags": [
       "Salon",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -432,28 +438,28 @@ export const SONGS = [
     "category": "salon",
     "duration": "5:30",
     "audioUrl": "/songs/salon/Chhupana Bhi Nahin Aata Full Video Song ｜ Baazigar ｜ Shahrukh Khan, Kajol ｜ Vinod Rathod.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500&q=80",
     "tags": [
       "Salon",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
     "id": "sa-26",
     "title": "Chori Chori Dil Tera  - Kumar Sanu Songs - Romantic Songs - 90's Love Song",
-    "artist": "Classic Retro Artist",
-    "movie": "Hits Collection",
+    "artist": "Classic 90s Artist",
+    "movie": "Bollywood Gold",
     "category": "salon",
     "duration": "5:30",
     "audioUrl": "/songs/salon/Chori Chori Dil Tera (HD) - Kumar Sanu Songs - Romantic Songs - 90's Love Song.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500&q=80",
     "tags": [
       "Salon",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -464,12 +470,12 @@ export const SONGS = [
     "category": "salon",
     "duration": "5:30",
     "audioUrl": "/songs/salon/Dil Cheer Ke Dekh ｜ Divya Bharti ｜ Kamal Sadanah ｜ Kumar Sanu ｜ Rang Movie ｜ 90's Romantic Song.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500&q=80",
     "tags": [
       "Salon",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -480,12 +486,12 @@ export const SONGS = [
     "category": "salon",
     "duration": "5:30",
     "audioUrl": "/songs/salon/Dil Hai Ki Manta Nahin Full Audio Song (Female Version) ｜ Anuradha Paudwal ｜ Aamir Khan, Pooja Bhatt.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500&q=80",
     "tags": [
       "Salon",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -496,12 +502,12 @@ export const SONGS = [
     "category": "salon",
     "duration": "5:30",
     "audioUrl": "/songs/salon/Dil Kehta Hai ｜ Akele Hum Akele Tum ｜ Kumar Sanu, Alka Yagnik ｜ Aamir Khan ｜ 90s Love Song.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500&q=80",
     "tags": [
       "Salon",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -512,12 +518,12 @@ export const SONGS = [
     "category": "salon",
     "duration": "5:30",
     "audioUrl": "/songs/salon/Husn Hai Suhana ｜ Coolie No. 1 ｜ Govinda & Karisma Kapoor ｜ Abhijeet & Chandana Dixit ｜ 90's Hits.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500&q=80",
     "tags": [
       "Salon",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -528,12 +534,12 @@ export const SONGS = [
     "category": "salon",
     "duration": "5:30",
     "audioUrl": "/songs/salon/Is Tarah Aashiqui Ka Lyrical ｜ Imtihan ｜ Kumar Sanu ｜ Saif Ali Khan, Raveena Tandon ｜ Anu Malik.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500&q=80",
     "tags": [
       "Salon",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -544,12 +550,12 @@ export const SONGS = [
     "category": "salon",
     "duration": "5:30",
     "audioUrl": "/songs/salon/Jeeta Tha Jiske Liye Full Lyrical Video Song ｜ Dilwale ｜ Ajay Devgan, Raveena Tandon ｜.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500&q=80",
     "tags": [
       "Salon",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -560,12 +566,12 @@ export const SONGS = [
     "category": "salon",
     "duration": "5:30",
     "audioUrl": "/songs/salon/Jeeye To Jeeye Kaise -Lyrical ｜ Saajan ｜ Pankaj Udhas ｜ Salman Khan & Madhuri ｜ 90's Hindi Sad Songs.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500&q=80",
     "tags": [
       "Salon",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -576,12 +582,12 @@ export const SONGS = [
     "category": "salon",
     "duration": "5:30",
     "audioUrl": "/songs/salon/Jhanjharia Lyrical (Male) ｜Krishna ｜ Suniel Shetty, Karisma Kapoor｜Abhijeet Bhattacharya ｜ Anu Malik.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500&q=80",
     "tags": [
       "Salon",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -592,28 +598,28 @@ export const SONGS = [
     "category": "salon",
     "duration": "5:30",
     "audioUrl": "/songs/salon/Kitna Haseen Chehra Full Lyrical Video Song ｜ Dilwale ｜ Ajay Devgan, Raveena Tandon ｜ Kumar Sanu.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500&q=80",
     "tags": [
       "Salon",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
     "id": "sa-36",
     "title": "Kumar Sanu & Sadhana Sargam Live Sydney - Teri umeed tera intezar - Deewana",
-    "artist": "Classic Retro Artist",
-    "movie": "Hits Collection",
+    "artist": "Classic 90s Artist",
+    "movie": "Bollywood Gold",
     "category": "salon",
     "duration": "5:30",
     "audioUrl": "/songs/salon/Kumar Sanu & Sadhana Sargam Live Sydney - Teri umeed tera intezar - Deewana.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500&q=80",
     "tags": [
       "Salon",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -624,12 +630,12 @@ export const SONGS = [
     "category": "salon",
     "duration": "5:30",
     "audioUrl": "/songs/salon/Lyrical： Tumhein Apna Banane Ki Kasam ｜ Sadak ｜ Kumar Sanu,Anuradha Paudwal ｜Sanjay Dutt,Pooja Bhatt.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500&q=80",
     "tags": [
       "Salon",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -640,12 +646,12 @@ export const SONGS = [
     "category": "salon",
     "duration": "5:30",
     "audioUrl": "/songs/salon/Main Duniya Bhula Doonga - Lyrical Video Song ｜｜ Aashiqui ｜ Kumar Sanu ｜ Rahul Roy, Anu Agarwal.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500&q=80",
     "tags": [
       "Salon",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -656,12 +662,12 @@ export const SONGS = [
     "category": "salon",
     "duration": "5:30",
     "audioUrl": "/songs/salon/Maine Pyaar Tumhi Se Kiya Hai Lyrical- Phool Aur Kaante ｜ Ajay Devgn & Madhoo ｜ Anuradha & Kumar.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500&q=80",
     "tags": [
       "Salon",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -672,12 +678,12 @@ export const SONGS = [
     "category": "salon",
     "duration": "5:30",
     "audioUrl": "/songs/salon/Mujhse Mohabbat Ka Izhaar (HD)｜ Hum Hain Rahi Pyar Ke (1993)｜ Aamir Khan｜ Juhi Chawla｜ Romantic Song.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500&q=80",
     "tags": [
       "Salon",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -688,12 +694,12 @@ export const SONGS = [
     "category": "salon",
     "duration": "5:30",
     "audioUrl": "/songs/salon/Oye Raju Pyar Na Kariyo Lyrical Video ｜Hadh Kar Di Aapne｜Anand Bakshi｜Anand Raj Anand｜Govinda,Rani M.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Salon",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -704,12 +710,12 @@ export const SONGS = [
     "category": "salon",
     "duration": "5:30",
     "audioUrl": "/songs/salon/Pehli Pehli Baar Mohabbat Ki Hai Full Video Song ｜ Sirf Tum｜Kumar Sanu,Alka Yagnik｜Sanjay K, Priya G.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500&q=80",
     "tags": [
       "Salon",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -720,12 +726,12 @@ export const SONGS = [
     "category": "salon",
     "duration": "5:30",
     "audioUrl": "/songs/salon/Pucho Zara Pucho ｜ Aamir Khan,Karisma Kapoor ｜ Alka Yagnik,Kumar Sanu ｜ Raja Hindustani ｜ 90's Hit.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500&q=80",
     "tags": [
       "Salon",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -736,12 +742,12 @@ export const SONGS = [
     "category": "salon",
     "duration": "5:30",
     "audioUrl": "/songs/salon/Raah Mein Unse Mulaqat - Lyrical ｜ Ajay Devgn, Tabu ｜ Kumar Sanu, Alka Yagnik ｜Vijaypath ｜ Anu Malik.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500&q=80",
     "tags": [
       "Salon",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -752,12 +758,12 @@ export const SONGS = [
     "category": "salon",
     "duration": "5:30",
     "audioUrl": "/songs/salon/Saaton Janam Main Tere Full Lyrical ｜Video Song ｜ Dilwale ｜ Ajay Devgan, Raveena Tandon ｜ Kumar Sanu.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500&q=80",
     "tags": [
       "Salon",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -768,44 +774,44 @@ export const SONGS = [
     "category": "salon",
     "duration": "5:30",
     "audioUrl": "/songs/salon/Sochenge Tumhe Pyar- Lyrical ｜ #Deewana ｜ #RishiKapoor, Divya Bharti ｜ 90's Best Song.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500&q=80",
     "tags": [
       "Salon",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
     "id": "sa-47",
     "title": "TU PYAR HAI KISI AUR KA ( Singers, Babla Mehta & Anuradha Paudwal )",
-    "artist": "Classic Retro Artist",
-    "movie": "Hits Collection",
+    "artist": "Classic 90s Artist",
+    "movie": "Bollywood Gold",
     "category": "salon",
     "duration": "5:30",
     "audioUrl": "/songs/salon/TU PYAR HAI KISI AUR KA ( Singers, Babla Mehta & Anuradha Paudwal ).mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500&q=80",
     "tags": [
       "Salon",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
     "id": "sa-48",
     "title": "To Chalun",
-    "artist": "Classic Retro Artist",
-    "movie": "Hits Collection",
+    "artist": "Classic 90s Artist",
+    "movie": "Bollywood Gold",
     "category": "salon",
     "duration": "5:30",
     "audioUrl": "/songs/salon/To Chalun.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500&q=80",
     "tags": [
       "Salon",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -816,12 +822,12 @@ export const SONGS = [
     "category": "salon",
     "duration": "5:30",
     "audioUrl": "/songs/salon/Tu Jo Hans Hans Ke HD ｜ Govinda, Aarti Chabria ｜Udit Narayan, Kavita Krishnamurthy ｜Raja Bhaiya Song.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500&q=80",
     "tags": [
       "Salon",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -832,12 +838,12 @@ export const SONGS = [
     "category": "salon",
     "duration": "5:30",
     "audioUrl": "/songs/salon/Tum dil ki dhakdan mein rehete ho - abhijeet bhattacharya ｜ unplugged ｜ 90+ million.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500&q=80",
     "tags": [
       "Salon",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -848,12 +854,12 @@ export const SONGS = [
     "category": "salon",
     "duration": "5:30",
     "audioUrl": "/songs/salon/Tumhein Dekhen Meri Aankhen ｜ Divya Bharti ｜ Kumar Sanu ｜ Alka Yagnik ｜ Rang Song ｜ 90's Sad Song.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500&q=80",
     "tags": [
       "Salon",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -864,12 +870,12 @@ export const SONGS = [
     "category": "salon",
     "duration": "5:30",
     "audioUrl": "/songs/salon/Tumsa Koi Pyaara ｜ Khuddar ｜ Govinda, Karisma Kapoor ｜ Kumar Sanu, Alka Yagnik ｜Anu Malik, 90s Hits.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500&q=80",
     "tags": [
       "Salon",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -880,28 +886,28 @@ export const SONGS = [
     "category": "salon",
     "duration": "5:30",
     "audioUrl": "/songs/salon/Tumse Milne Ko Dil Karta Hai ❤️🎶 ｜ Phool Aur Kaante ｜ Ajay Devgn & Madhoo ｜ Kumar Sanu, Alka Yagnik.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500&q=80",
     "tags": [
       "Salon",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
     "id": "sa-54",
     "title": "Ustad Nusrat Fateh Ali Khan - Dulhe Ka Sehra Suhana in HD",
-    "artist": "Classic Retro Artist",
-    "movie": "Hits Collection",
+    "artist": "Classic 90s Artist",
+    "movie": "Bollywood Gold",
     "category": "salon",
     "duration": "5:30",
     "audioUrl": "/songs/salon/Ustad Nusrat Fateh Ali Khan - Dulhe Ka Sehra Suhana in HD.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500&q=80",
     "tags": [
       "Salon",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -912,12 +918,12 @@ export const SONGS = [
     "category": "salon",
     "duration": "5:30",
     "audioUrl": "/songs/salon/Waada Raha Sanam -4K ｜ Akshay K & Ayesha J ｜ Alka Y & Abhijeet ｜ Khiladi ｜ 90's Hindi Romantic Songs.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500&q=80",
     "tags": [
       "Salon",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -928,12 +934,12 @@ export const SONGS = [
     "category": "salon",
     "duration": "5:30",
     "audioUrl": "/songs/salon/Woh Meri Neend Mera Chain Lyrical - Hum Hain Rahi Pyar Ke ｜ Aamir Khan, Juhi Chawla ｜ Sadhana Sargam.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500&q=80",
     "tags": [
       "Salon",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -944,60 +950,60 @@ export const SONGS = [
     "category": "salon",
     "duration": "5:30",
     "audioUrl": "/songs/salon/＂Bas Ek Sanam Chahiye Aashiqui Ke Liye＂ Lyrical Video ｜ Aashiqui ｜ Kumar Sanu ｜ Rahul R, Anu Agarwal.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500&q=80",
     "tags": [
       "Salon",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
     "id": "mi-58",
     "title": "50 New Woodworking Tools On Amazon Every Woodworker Needs",
-    "artist": "Classic Retro Artist",
-    "movie": "Hits Collection",
+    "artist": "Classic 90s Artist",
+    "movie": "Bollywood Gold",
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/50 New Woodworking Tools On Amazon Every Woodworker Needs.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
     "id": "mi-59",
     "title": "Abhinandan & Rithika - Kahaani [Lyric Video]",
-    "artist": "Classic Retro Artist",
-    "movie": "Hits Collection",
+    "artist": "Classic 90s Artist",
+    "movie": "Bollywood Gold",
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Abhinandan & Rithika - Kahaani [Lyric Video].mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
     "id": "mi-60",
     "title": "Abhinav Relan - Shaamil  (Official Music Video)",
-    "artist": "Classic Retro Artist",
-    "movie": "Hits Collection",
+    "artist": "Classic 90s Artist",
+    "movie": "Bollywood Gold",
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Abhinav Relan - Shaamil  (Official Music Video).mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1008,12 +1014,12 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Ae Kash Ke Hum Full Video - Kabhi Haan Kabhi Naa ｜ Shah Rukh Khan, Suchitra ｜ Kumar Sanu.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1024,12 +1030,12 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Aisi Deewangi - Lyrical Video ｜ Deewana ｜ Shahrukh Khan ｜ Divya Bharti ｜ Ishtar Music.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1040,60 +1046,60 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/All types carpenters tools in wholesale ｜ wood cutting machines ｜ jigsaw ｜ bendsaw ｜ router machine.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
     "id": "mi-64",
     "title": "Anuv Jain - ALAG AASMAAN (a song on the ukulele)",
-    "artist": "Classic Retro Artist",
-    "movie": "Hits Collection",
+    "artist": "Classic 90s Artist",
+    "movie": "Bollywood Gold",
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Anuv Jain - ALAG AASMAAN (a song on the ukulele).mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
     "id": "mi-65",
     "title": "Asim Azhar - Jo Tu Na Mila",
     "artist": "Kunaal Vermaa",
-    "movie": "Hits Collection",
+    "movie": "Bollywood Gold",
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Asim Azhar - Jo Tu Na Mila ｜ Kunaal Vermaa.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
     "id": "mi-66",
     "title": "BARBER SONGS PLAYLIST： Barber Saloon Hits 90's Bollywood Songs Collection",
     "artist": "Hindi Songs",
-    "movie": "Hits Collection",
+    "movie": "Bollywood Gold",
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/BARBER SONGS PLAYLIST： Barber Saloon Hits 90's Bollywood Songs Collection ｜ Hindi Songs.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1104,28 +1110,28 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Beginner hand tools ｜ Carpenter tools name in Hindi ｜ लकड़ी के काम की शुरुआत करें यह औजार लेकर !!.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
     "id": "mi-68",
     "title": "Bollywood Remix Special",
     "artist": "Audio Jukebox",
-    "movie": "Hits Collection",
+    "movie": "Bollywood Gold",
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Bollywood Remix Special ｜ Audio Jukebox.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1136,28 +1142,28 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Bom Diggy Diggy  (VIDEO) ｜ Zack Knight ｜ Jasmin Walia ｜ Sonu Ke Titu Ki Sweety.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
     "id": "mi-70",
     "title": "Car Nachdi⧸Hornn Blow (Video)",
-    "artist": "Classic Retro Artist",
-    "movie": "Hits Collection",
+    "artist": "Classic 90s Artist",
+    "movie": "Bollywood Gold",
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Car Nachdi⧸Hornn Blow (Video) ｜ T-Series Mixtape Punjabi ｜ Gippy Grewal ,Harrdy Sandhu & Neha Kakkar.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1168,12 +1174,12 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Carpenter Tools Name with Detail ｜ Beginner hand tool ｜ @MZSwoodwork.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1184,44 +1190,44 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Chhupana Bhi Nahin Aata Full Video Song ｜ Baazigar ｜ Shahrukh Khan, Kajol ｜ Vinod Rathod.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
     "id": "mi-73",
     "title": "Chori Chori Dil Tera  - Kumar Sanu Songs - Romantic Songs - 90's Love Song",
-    "artist": "Classic Retro Artist",
-    "movie": "Hits Collection",
+    "artist": "Classic 90s Artist",
+    "movie": "Bollywood Gold",
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Chori Chori Dil Tera (HD) - Kumar Sanu Songs - Romantic Songs - 90's Love Song.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
     "id": "mi-74",
     "title": "Concealed Door Closer kaise lagate Hain？ how to install concealed door closer",
     "artist": "door closer fitting",
-    "movie": "Hits Collection",
+    "movie": "Bollywood Gold",
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Concealed Door Closer kaise lagate Hain？ how to install concealed door closer ｜ door closer fitting.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1232,12 +1238,12 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Dil Cheer Ke Dekh ｜ Divya Bharti ｜ Kamal Sadanah ｜ Kumar Sanu ｜ Rang Movie ｜ 90's Romantic Song.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1248,12 +1254,12 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Dil Hai Ki Manta Nahin Full Audio Song (Female Version) ｜ Anuradha Paudwal ｜ Aamir Khan, Pooja Bhatt.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1264,12 +1270,12 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Dil Kehta Hai ｜ Akele Hum Akele Tum ｜ Kumar Sanu, Alka Yagnik ｜ Aamir Khan ｜ 90s Love Song.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1280,60 +1286,60 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Full Video： Kabhi Kabhi Aditi Zindagi ｜ Jaane Tu Ya Jaane Na ｜ A.R. Rahman ｜ Rashid Ali.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
     "id": "mi-79",
     "title": "Happy New Year 2019 Party Super Hit Songs",
     "artist": "Audio Jukebox",
-    "movie": "Hits Collection",
+    "movie": "Bollywood Gold",
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Happy New Year 2019 Party Super Hit Songs ｜ Audio Jukebox ｜ T-SERIES.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
     "id": "mi-80",
     "title": "How to making aluminium window",
     "artist": "एलुमिनियम विंडो बनाना सीखे आसान और सरल भाषा में",
-    "movie": "Hits Collection",
+    "movie": "Bollywood Gold",
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/How to making aluminium window ｜｜ एलुमिनियम विंडो बनाना सीखे आसान और सरल भाषा में ｜｜.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
     "id": "mi-81",
     "title": "Hum Lakh Chupaye Pyar Magar",
     "artist": "Jaan Tere Naam - Kumar Sanu, Asha Bhosle",
-    "movie": "Hits Collection",
+    "movie": "Bollywood Gold",
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Hum Lakh Chupaye Pyar Magar ｜ 4K Video Song ｜ Jaan Tere Naam - Kumar Sanu, Asha Bhosle.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1344,28 +1350,28 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Hum Yaar Hai Tumhare ｜ Alka Yagnik ｜ Udit Narayan ｜ Haan Maine Bhi Pyaar Kiya (2002).mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
     "id": "mi-83",
     "title": "Humko Deewana Kar Gaye [Full Song] Humko Deewana Kar Gaye",
-    "artist": "Classic Retro Artist",
-    "movie": "Hits Collection",
+    "artist": "Classic 90s Artist",
+    "movie": "Bollywood Gold",
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Humko Deewana Kar Gaye [Full Song] Humko Deewana Kar Gaye.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1376,12 +1382,12 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Husn Hai Suhana ｜ Coolie No. 1 ｜ Govinda & Karisma Kapoor ｜ Abhijeet & Chandana Dixit ｜ 90's Hits.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1392,12 +1398,12 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Ilahi Full Video Song ｜ Yeh Jawaani Hai Deewani ｜ Ranbir Kapoor, Deepika Padukone ｜ Pritam.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1408,12 +1414,12 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Is Pyar Se Meri Taraf Na Dekho - Lyrical ｜ Sharukh K, Urmila M ｜ Alka Y, Kumar S ｜ Chamatkar Movie.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1424,12 +1430,12 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Is Tarah Aashiqui Ka Lyrical ｜ Imtihan ｜ Kumar Sanu ｜ Saif Ali Khan, Raveena Tandon ｜ Anu Malik.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1440,12 +1446,12 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/J-910 ｜ WudPro ｜ Horizontal Mortiser ｜ Jai Industries ｜ Solidwood ｜ Woodworking Machines.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1456,12 +1462,12 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Jagga Jasoos： Galti Se Mistake Video Song ｜ Ranbir, Katrina ｜ Pritam, Arijit, Amit ｜ Amitabh B.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1472,12 +1478,12 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Jeeye To Jeeye Kaise -Lyrical ｜ Saajan ｜ Pankaj Udhas ｜ Salman Khan & Madhuri ｜ 90's Hindi Sad Songs.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1488,28 +1494,28 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Jhanjharia Lyrical (Male) ｜Krishna ｜ Suniel Shetty, Karisma Kapoor｜Abhijeet Bhattacharya ｜ Anu Malik.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
     "id": "mi-92",
     "title": "Kinaarey",
-    "artist": "Classic Retro Artist",
-    "movie": "Hits Collection",
+    "artist": "Classic 90s Artist",
+    "movie": "Bollywood Gold",
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Kinaarey.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1520,28 +1526,28 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Kitna Haseen Chehra Full Lyrical Video Song ｜ Dilwale ｜ Ajay Devgan, Raveena Tandon ｜ Kumar Sanu.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
     "id": "mi-94",
     "title": "Kumar Sanu & Sadhana Sargam Live Sydney - Teri umeed tera intezar - Deewana",
-    "artist": "Classic Retro Artist",
-    "movie": "Hits Collection",
+    "artist": "Classic 90s Artist",
+    "movie": "Bollywood Gold",
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Kumar Sanu & Sadhana Sargam Live Sydney - Teri umeed tera intezar - Deewana.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1552,12 +1558,12 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Lal Dupatta Full Song ｜ Mujhse Shaadi Karogi ｜ Salman Khan,Priyanka Chopra ｜Alka Yagnik,Udit Narayan.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1568,28 +1574,28 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Lyrical： Tumhein Apna Banane Ki Kasam ｜ Sadak ｜ Kumar Sanu,Anuradha Paudwal ｜Sanjay Dutt,Pooja Bhatt.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
     "id": "mi-97",
     "title": "Maruti eeco missing problem solve at home अपनी गाड़ी की मिसिंग प्रॉब्लम खुद सोल करें",
-    "artist": "Classic Retro Artist",
-    "movie": "Hits Collection",
+    "artist": "Classic 90s Artist",
+    "movie": "Bollywood Gold",
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Maruti eeco missing problem solve at home अपनी गाड़ी की मिसिंग प्रॉब्लम खुद सोल करें.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1600,12 +1606,12 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Mere Liye Tum Kaafi Ho Song ｜ Shubh Mangal Zyada Saavdhan ｜ Ayushman Khurana,Jeetu ｜ Tanishk - Vayu.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1616,12 +1622,12 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Millind Gaba： NAZAR LAG JAYEGI Video Song ｜ Kamal Raja ｜ Shabby ｜ New Hindi Songs 2018.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1632,12 +1638,12 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Mujhse Mohabbat Ka Izhaar (HD)｜ Hum Hain Rahi Pyar Ke (1993)｜ Aamir Khan｜ Juhi Chawla｜ Romantic Song.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1648,28 +1654,28 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/NEW BOLLYWOOD HINDI SONGS 2019 ｜ VIDEO JUKEBOX ｜ Top Bollywood Songs 2019.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
     "id": "mi-102",
     "title": "NEW! Ep 4513 - Bhide Khud Karega Sonu ke Room ko Colour!",
     "artist": "Taarak Mehta ka Ooltah Chashmah",
-    "movie": "Hits Collection",
+    "movie": "Bollywood Gold",
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/NEW! Ep 4513 - Bhide Khud Karega Sonu ke Room ko Colour! ｜Taarak Mehta ka Ooltah Chashmah.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1680,28 +1686,28 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Neele Neele Ambar Par - Male Version Lyric Video - Kalaakaar ｜ Sridevi ｜ Kishore Kumar.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
     "id": "mi-104",
     "title": "Neha Kakkar",
-    "artist": "Classic Retro Artist",
-    "movie": "Hits Collection",
+    "artist": "Classic 90s Artist",
+    "movie": "Bollywood Gold",
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Neha Kakkar T-Series Mixtape ： Kabira Naina l Mohd Irfan l Bhushan Kumar l Ahmed Khan l Abhijit V.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1712,12 +1718,12 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Patakha Guddi Highway Full Video Song (Official) ｜｜ A.R Rahman ｜ Alia Bhatt, Randeep Hooda.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1728,12 +1734,12 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Pehli Pehli Baar Mohabbat Ki Hai Full Video Song ｜ Sirf Tum｜Kumar Sanu,Alka Yagnik｜Sanjay K, Priya G.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1744,12 +1750,12 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Pucho Zara Pucho ｜ Aamir Khan,Karisma Kapoor ｜ Alka Yagnik,Kumar Sanu ｜ Raja Hindustani ｜ 90's Hit.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1760,12 +1766,12 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/ROCKSTAR： Kun Faya Kun (Full Video Song) ｜ Ranbir Kapoor ｜ A.R. Rahman, Javed Ali, Mohit Chauhan.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1776,12 +1782,12 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Raah Mein Unse Mulaqat - Lyrical ｜ Ajay Devgn, Tabu ｜ Kumar Sanu, Alka Yagnik ｜Vijaypath ｜ Anu Malik.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1792,12 +1798,12 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Saaton Janam Main Tere Full Lyrical ｜Video Song ｜ Dilwale ｜ Ajay Devgan, Raveena Tandon ｜ Kumar Sanu.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1808,28 +1814,28 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Shehar ｜ Vidit Meghwal ｜ Official Music Video.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
     "id": "mi-112",
     "title": "Sliding Almari Kaise banaye",
     "artist": "How to make a wooden almirah at home",
-    "movie": "Hits Collection",
+    "movie": "Bollywood Gold",
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Sliding Almari Kaise banaye ｜｜ How to make a wooden almirah at home.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1840,12 +1846,12 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Sochenge Tumhe Pyar- Lyrical ｜ #Deewana ｜ #RishiKapoor, Divya Bharti ｜ 90's Best Song.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1856,12 +1862,12 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Sona Kitna Sona Hai ｜ Govinda, Karisma Kapoor ｜ Udit N & Poornima ｜ Hero No.1 ｜ 90's Hits.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1872,28 +1878,28 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Subah Subah (Video) ｜ Arijit Singh, Prakriti Kakar ｜ Amaal Mallik ｜ Sonu Ke Titu Ki Sweety.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
     "id": "mi-116",
     "title": "Suriel Hess - Sing Myself to Sleep (Lyric Video)",
-    "artist": "Classic Retro Artist",
-    "movie": "Hits Collection",
+    "artist": "Classic 90s Artist",
+    "movie": "Bollywood Gold",
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Suriel Hess - Sing Myself to Sleep (Lyric Video).mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1904,44 +1910,44 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/The PropheC - Kina Chir ｜ Official Video ｜ Latest Punjabi Songs.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
     "id": "mi-118",
     "title": "The Speed Square Basic - Speed Square कैसे Use करते है In Hindi",
-    "artist": "Classic Retro Artist",
-    "movie": "Hits Collection",
+    "artist": "Classic 90s Artist",
+    "movie": "Bollywood Gold",
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/The Speed Square Basic - Speed Square कैसे Use करते है In Hindi.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
     "id": "mi-119",
     "title": "To Chalun",
-    "artist": "Classic Retro Artist",
-    "movie": "Hits Collection",
+    "artist": "Classic 90s Artist",
+    "movie": "Bollywood Gold",
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/To Chalun.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1952,12 +1958,12 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Top 10 Romantic Hindi Songs 2019 - Video Jukebox ｜ New Hindi Love Songs ｜ BOLLYWOOD ROMANTIC JUKEBOX.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -1968,28 +1974,28 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Tu Jo Hans Hans Ke HD ｜ Govinda, Aarti Chabria ｜Udit Narayan, Kavita Krishnamurthy ｜Raja Bhaiya Song.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
     "id": "mi-122",
     "title": "Tu Saath Hai - Raghav Meattle",
-    "artist": "Classic Retro Artist",
-    "movie": "Hits Collection",
+    "artist": "Classic 90s Artist",
+    "movie": "Bollywood Gold",
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Tu Saath Hai - Raghav Meattle.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -2000,12 +2006,12 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Tumhein Dekhen Meri Aankhen ｜ Divya Bharti ｜ Kumar Sanu ｜ Alka Yagnik ｜ Rang Song ｜ 90's Sad Song.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -2016,12 +2022,12 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Tumsa Koi Pyaara ｜ Khuddar ｜ Govinda, Karisma Kapoor ｜ Kumar Sanu, Alka Yagnik ｜Anu Malik, 90s Hits.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -2032,12 +2038,12 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Vaaste Song： Dhvani Bhanushali, Tanishk Bagchi ｜ Nikhil D'Souza ｜ Bhushan Kumar ｜ Radhika R, Vinay S.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -2048,12 +2054,12 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Waada Raha Sanam -4K ｜ Akshay K & Ayesha J ｜ Alka Y & Abhijeet ｜ Khiladi ｜ 90's Hindi Romantic Songs.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -2064,12 +2070,12 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Woh Ladki Bahut Yaad Aati Hai - Kumar Sanu ｜ Qayamat ｜ Best Hindi Song.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -2080,76 +2086,76 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/Woh Meri Neend Mera Chain Lyrical - Hum Hain Rahi Pyar Ke ｜ Aamir Khan, Juhi Chawla ｜ Sadhana Sargam.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
     "id": "mi-129",
     "title": "khayaal",
-    "artist": "Classic Retro Artist",
-    "movie": "Hits Collection",
+    "artist": "Classic 90s Artist",
+    "movie": "Bollywood Gold",
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/khayaal.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
     "id": "mi-130",
     "title": "आते जाते खूबसूरत आवारा सड़को पे Aate Jate Khoobsurat Awara - किशोर कुमार - अनुरोध - राजेश खन्ना  song",
-    "artist": "Classic Retro Artist",
-    "movie": "Hits Collection",
+    "artist": "Classic 90s Artist",
+    "movie": "Bollywood Gold",
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/आते जाते खूबसूरत आवारा सड़को पे Aate Jate Khoobsurat Awara - किशोर कुमार - अनुरोध - राजेश खन्ना  song.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
     "id": "mi-131",
     "title": "देखिए Indian WoodWorking Bench ⧸ अड्डा कैसे बनाते है？ Carpenter जरूर देखें WorkBench बनाने का तरीका।",
-    "artist": "Classic Retro Artist",
-    "movie": "Hits Collection",
+    "artist": "Classic 90s Artist",
+    "movie": "Bollywood Gold",
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/देखिए Indian WoodWorking Bench ⧸ अड्डा कैसे बनाते है？ Carpenter जरूर देखें WorkBench बनाने का तरीका।.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
     "id": "mi-132",
     "title": "देखिए कितनी बढ़िया MARKING GAUGE⧸खिस है - Marking Gauge for carpenter Unboxing In Hindi 2023",
-    "artist": "Classic Retro Artist",
-    "movie": "Hits Collection",
+    "artist": "Classic 90s Artist",
+    "movie": "Bollywood Gold",
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/देखिए कितनी बढ़िया MARKING GAUGE⧸खिस है - Marking Gauge for carpenter Unboxing In Hindi 2023.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -2160,12 +2166,12 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/＂Safarnama＂ Video Song ｜ Tamasha ｜ Ranbir Kapoor, Deepika Padukone ｜ T-Series.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
@@ -2176,204 +2182,236 @@ export const SONGS = [
     "category": "mistry",
     "duration": "5:30",
     "audioUrl": "/songs/mistry/🔴 Mastering Euro Truck Simulator 2 Gameplay ｜ Indian Trucker ｜ Heavy Cargo ｜ Drive #100.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=500&q=80",
     "tags": [
       "Mistry",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
-    "id": "of-135",
+    "id": "ri-135",
+    "title": "Rickshaw Wala Hit Song Playlist",
+    "artist": "Jo Bhi Kasmein",
+    "movie": "Jhanjharia",
+    "category": "rickshaw",
+    "duration": "5:30",
+    "audioUrl": "/songs/rickshaw/Rickshaw Wala Hit Song Playlist ｜ Jo Bhi Kasmein ｜ Jhanjharia ｜ Main Agar Saamne ｜ 90s Hindi Songs.mp3",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1532375810709-75b1da00537c?w=500&q=80",
+    "tags": [
+      "Rickshaw",
+      "Bollywood 90s",
+      "Classic Stream"
+    ]
+  },
+  {
+    "id": "ri-136",
+    "title": "Rickshaw Wala Hit Song Playlist",
+    "artist": "Jo Bhi Kasmein",
+    "movie": "Jhanjharia",
+    "category": "rickshaw",
+    "duration": "5:30",
+    "audioUrl": "/songs/rickshaw/Rickshaw Wala Hit Song Playlist ｜ Jo Bhi Kasmein ｜ Jhanjharia ｜ Main Agar Saamne ｜ Auto Riksha Songs.mp3",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1532375810709-75b1da00537c?w=500&q=80",
+    "tags": [
+      "Rickshaw",
+      "Bollywood 90s",
+      "Classic Stream"
+    ]
+  },
+  {
+    "id": "of-137",
     "title": "Dil Kehta Hai",
     "artist": "Akele Hum Akele Tum",
     "movie": "Kumar Sanu, Alka Yagnik",
     "category": "office",
     "duration": "5:30",
     "audioUrl": "/songs/office/Dil Kehta Hai ｜ Akele Hum Akele Tum ｜ Kumar Sanu, Alka Yagnik ｜ Aamir Khan ｜ 90s Love Song.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=500&q=80",
     "tags": [
       "Office",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
-    "id": "of-136",
+    "id": "of-138",
     "title": "Mujhse Mohabbat Ka Izhaar",
     "artist": "Hum Hain Rahi Pyar Ke (1993)",
     "movie": "Aamir Khan",
     "category": "office",
     "duration": "5:30",
     "audioUrl": "/songs/office/Mujhse Mohabbat Ka Izhaar (HD)｜ Hum Hain Rahi Pyar Ke (1993)｜ Aamir Khan｜ Juhi Chawla｜ Romantic Song.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=500&q=80",
     "tags": [
       "Office",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
-    "id": "pe-137",
+    "id": "pe-139",
     "title": "Aisi Deewangi - Lyrical Video",
     "artist": "Deewana",
     "movie": "Shahrukh Khan",
     "category": "peace",
     "duration": "5:30",
     "audioUrl": "/songs/peace/Aisi Deewangi - Lyrical Video ｜ Deewana ｜ Shahrukh Khan ｜ Divya Bharti ｜ Ishtar Music.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=500&q=80",
     "tags": [
       "Peace",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
-    "id": "pe-138",
+    "id": "pe-140",
     "title": "Dil Hai Ki Manta Nahin Full Audio Song (Female Version)",
     "artist": "Anuradha Paudwal",
     "movie": "Aamir Khan, Pooja Bhatt",
     "category": "peace",
     "duration": "5:30",
     "audioUrl": "/songs/peace/Dil Hai Ki Manta Nahin Full Audio Song (Female Version) ｜ Anuradha Paudwal ｜ Aamir Khan, Pooja Bhatt.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=500&q=80",
     "tags": [
       "Peace",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
-    "id": "pe-139",
+    "id": "pe-141",
     "title": "Jeeye To Jeeye Kaise -Lyrical",
     "artist": "Saajan",
     "movie": "Pankaj Udhas",
     "category": "peace",
     "duration": "5:30",
     "audioUrl": "/songs/peace/Jeeye To Jeeye Kaise -Lyrical ｜ Saajan ｜ Pankaj Udhas ｜ Salman Khan & Madhuri ｜ 90's Hindi Sad Songs.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=500&q=80",
     "tags": [
       "Peace",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
-    "id": "pe-140",
+    "id": "pe-142",
     "title": "ROCKSTAR： Kun Faya Kun",
     "artist": "Ranbir Kapoor",
     "movie": "A.R. Rahman, Javed Ali, Mohit Chauhan",
     "category": "peace",
     "duration": "5:30",
     "audioUrl": "/songs/peace/ROCKSTAR： Kun Faya Kun (Full Video Song) ｜ Ranbir Kapoor ｜ A.R. Rahman, Javed Ali, Mohit Chauhan.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=500&q=80",
     "tags": [
       "Peace",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
-    "id": "pe-141",
+    "id": "pe-143",
     "title": "Tumhein Dekhen Meri Aankhen",
     "artist": "Divya Bharti",
     "movie": "Kumar Sanu",
     "category": "peace",
     "duration": "5:30",
     "audioUrl": "/songs/peace/Tumhein Dekhen Meri Aankhen ｜ Divya Bharti ｜ Kumar Sanu ｜ Alka Yagnik ｜ Rang Song ｜ 90's Sad Song.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "cover": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=500&q=80",
     "tags": [
       "Peace",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
-    "id": "tr-142",
+    "id": "tr-144",
     "title": "Anuv Jain - ALAG AASMAAN (a song on the ukulele)",
-    "artist": "Classic Retro Artist",
-    "movie": "Hits Collection",
+    "artist": "Classic 90s Artist",
+    "movie": "Bollywood Gold",
     "category": "travel",
     "duration": "5:30",
     "audioUrl": "/songs/travel/Anuv Jain - ALAG AASMAAN (a song on the ukulele).mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1506015391300-4802dc74de2e?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=500&q=80",
     "tags": [
       "Travel",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
-    "id": "tr-143",
+    "id": "tr-145",
     "title": "Ilahi Full Video Song",
     "artist": "Yeh Jawaani Hai Deewani",
     "movie": "Ranbir Kapoor, Deepika Padukone",
     "category": "travel",
     "duration": "5:30",
     "audioUrl": "/songs/travel/Ilahi Full Video Song ｜ Yeh Jawaani Hai Deewani ｜ Ranbir Kapoor, Deepika Padukone ｜ Pritam.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1506015391300-4802dc74de2e?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=500&q=80",
     "tags": [
       "Travel",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
-    "id": "tr-144",
+    "id": "tr-146",
     "title": "Patakha Guddi Highway Full Video Song (Official)",
     "artist": "A.R Rahman",
     "movie": "Alia Bhatt, Randeep Hooda",
     "category": "travel",
     "duration": "5:30",
     "audioUrl": "/songs/travel/Patakha Guddi Highway Full Video Song (Official) ｜｜ A.R Rahman ｜ Alia Bhatt, Randeep Hooda.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1506015391300-4802dc74de2e?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=500&q=80",
     "tags": [
       "Travel",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
-    "id": "tr-145",
+    "id": "tr-147",
     "title": "Subah Subah (Video)",
     "artist": "Arijit Singh, Prakriti Kakar",
     "movie": "Amaal Mallik",
     "category": "travel",
     "duration": "5:30",
     "audioUrl": "/songs/travel/Subah Subah (Video) ｜ Arijit Singh, Prakriti Kakar ｜ Amaal Mallik ｜ Sonu Ke Titu Ki Sweety.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1506015391300-4802dc74de2e?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=500&q=80",
     "tags": [
       "Travel",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   },
   {
-    "id": "tr-146",
+    "id": "tr-148",
     "title": "＂Safarnama＂ Video Song",
     "artist": "Tamasha",
     "movie": "Ranbir Kapoor, Deepika Padukone",
     "category": "travel",
     "duration": "5:30",
     "audioUrl": "/songs/travel/＂Safarnama＂ Video Song ｜ Tamasha ｜ Ranbir Kapoor, Deepika Padukone ｜ T-Series.mp3",
-    "ytUrl": "https://music.youtube.com",
-    "cover": "https://images.unsplash.com/photo-1506015391300-4802dc74de2e?w=400&q=80",
+    "playlistUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "cover": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=500&q=80",
     "tags": [
       "Travel",
-      "Bollywood Retro",
-      "Official Audio"
+      "Bollywood 90s",
+      "Classic Stream"
     ]
   }
 ];

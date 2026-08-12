@@ -4,40 +4,44 @@ import {
   playTruckHorn, 
   playSalonScissorsSound,
   playMistryCarpenterSound, 
+  playRickshawSound,
   playOfficeSound, 
   playPeaceBellSound, 
   playTravelEngineSound 
 } from './utils/hornSound';
 import { 
   Play, Pause, SkipBack, SkipForward, Shuffle, Repeat, 
-  Download, ListMusic, Volume2, VolumeX, Search, X, Radio, Scissors, Wrench, Coffee, Bell, Compass, Dices
+  ExternalLink, ListMusic, Volume2, VolumeX, Search, X, Radio, Scissors, Wrench, Car, Coffee, Bell, Compass, Dices
 } from 'lucide-react';
 
 const CATEGORY_BACKGROUNDS = {
   truck: '/images/truck_hero.png',
   salon: '/images/salon_hero.png',
   mistry: '/images/mistry_hero.png',
+  rickshaw: '/images/rickshaw_hero.png',
   office: '/images/office_hero.png',
   peace: '/images/peace_hero.png',
   travel: '/images/travel_hero.png'
 };
 
 const CATEGORY_SLOGANS = {
-  truck: 'बुरी नज़र वाले तेरा मुँह काला 🚛 • Horn OK Please Dhaba Special',
-  salon: 'डीलक्स सैलून • 90s बॉलीवुड रेडियो, चंपी मालिश & सीज़र स्निप ✂️',
-  mistry: 'लकड़ी कारपेंटर वर्कशॉप • मिस्त्री का काम सॉलिड 🔨',
-  office: 'चाय और कोड • डीडलाइन फोकस ☕',
-  peace: 'गंगा तेरा पानी अमृत • रूहानी शांति 🕉️',
-  travel: 'लंबी सड़क • हाइवे Sunset ड्राइव 🛣️'
+  truck: 'बुरी नज़र वाले तेरा मुँह काला 🚛 • Horn OK Please Dhaba Special (hornokplease.xyz)',
+  salon: 'डीलक्स सैलून • 90s बॉलीवुड रेडियो, चंपी मालिश & सीज़र स्निप ✂️ (saloon.wtf)',
+  mistry: 'लकड़ी कारपेंटर वर्कशॉप • मिस्त्री का काम सॉलिड 🔨 (rajumistri.onrender.com)',
+  rickshaw: 'मीटर डाउन 🛺 • 90s ऑटो ड्राइवर सिटी हिट्स (90s-nostalgiaindia.netlify.app)',
+  office: 'चाय और कोड • डीडलाइन फोकस ☕ (productivityhindi)',
+  peace: 'गंगा तेरा पानी अमृत • रूहानी शांति 🕉️ (nostalgiahits.in)',
+  travel: 'लंबी सड़क • हाइवे Sunset ड्राइव 🛣️ (truckdrivermusic.in)'
 };
 
 const CATEGORY_LIVE_TELEMETRY = {
-  truck: { min: 14850, max: 48900, text: 'on the highway 🚛' },
-  salon: { min: 11200, max: 36400, text: 'लाइव ग्राहक डीलक्स सैलून सीट पर ✂️' },
-  mistry: { min: 9400, max: 28900, text: 'लाइव कारपेंटर मिस्त्री वर्कशॉप में 🔨' },
-  office: { min: 8200, max: 24500, text: 'लाइव ऑफिस वर्कर काम में व्यस्त ☕' },
-  peace: { min: 16500, max: 52000, text: 'लाइव रूहानी शांति में लीन 🕉️' },
-  travel: { min: 12800, max: 41200, text: 'लाइव यात्री रोड ट्रिप सफ़र पर 🛣️' }
+  truck: { min: 24850, max: 58900, text: 'LIVE HUMANS TUNED IN ON THIS WEBSITE 🚛' },
+  salon: { min: 18200, max: 46400, text: 'LIVE HUMANS LISTENING AT SALOON ✂️' },
+  mistry: { min: 14400, max: 38900, text: 'LIVE HUMANS IN CARPENTER WORKSHOP 🔨' },
+  rickshaw: { min: 21900, max: 51200, text: 'LIVE HUMANS IN AUTO RICKSHAW 🛺' },
+  office: { min: 12200, max: 34500, text: 'LIVE HUMANS WORKING & LISTENING ☕' },
+  peace: { min: 26500, max: 62000, text: 'LIVE HUMANS IN SPIRITUAL SUFI PEACE 🕉️' },
+  travel: { min: 19800, max: 49200, text: 'LIVE HUMANS ON HIGHWAY ROAD TRIP 🛣️' }
 };
 
 export default function App() {
@@ -50,8 +54,8 @@ export default function App() {
   const [duration, setDuration] = useState(0);
   const [isShuffle, setIsShuffle] = useState(true);
   const [isRepeat, setIsRepeat] = useState(false);
-  const [liveCount, setLiveCount] = useState(14850);
-  const [clockTime, setClockTime] = useState('7:28 pm');
+  const [liveCount, setLiveCount] = useState(24850);
+  const [clockTime, setClockTime] = useState('11:12 am');
 
   const audioRef = useRef(null);
 
@@ -65,7 +69,7 @@ export default function App() {
     return () => clearInterval(interval);
   }, []);
 
-  // Update live listener count dynamically every 2 seconds based on active category
+  // Update real-time active human visitor count every 1.5 seconds
   useEffect(() => {
     const base = CATEGORY_LIVE_TELEMETRY[activeCategory] || CATEGORY_LIVE_TELEMETRY.truck;
     const initial = Math.floor(Math.random() * (base.max - base.min + 1)) + base.min;
@@ -73,11 +77,11 @@ export default function App() {
 
     const interval = setInterval(() => {
       setLiveCount((prev) => {
-        const delta = Math.floor(Math.random() * 45) - 20;
+        const delta = Math.floor(Math.random() * 25) - 10;
         const newCount = prev + delta;
         return Math.max(base.min, Math.min(base.max, newCount));
       });
-    }, 2000);
+    }, 1500);
 
     return () => clearInterval(interval);
   }, [activeCategory]);
@@ -174,6 +178,7 @@ export default function App() {
       case 'truck': playTruckHorn(); break;
       case 'salon': playSalonScissorsSound(); break;
       case 'mistry': playMistryCarpenterSound(); break;
+      case 'rickshaw': playRickshawSound(); break;
       case 'office': playOfficeSound(); break;
       case 'peace': playPeaceBellSound(); break;
       case 'travel': playTravelEngineSound(); break;
@@ -189,6 +194,8 @@ export default function App() {
         return { Icon: Scissors, main: 'सीज़र स्निप-स्निप', sub: 'सैलून कैंची & चंपी ✂️' };
       case 'mistry':
         return { Icon: Wrench, main: 'मिस्त्री हैमर & सॉ', sub: 'कारपेंटर औजार 🔨' };
+      case 'rickshaw':
+        return { Icon: Car, main: 'मीटर डाउन', sub: 'ऑटो रिक्शा पू-पू! 🛺' };
       case 'office':
         return { Icon: Coffee, main: 'कॉफी & किबोर्ड', sub: 'फोकस चाय घूंट ☕' };
       case 'peace':
@@ -205,6 +212,7 @@ export default function App() {
       case 'truck': return 'ट्रक वाला';
       case 'salon': return 'डीलक्स सैलून';
       case 'mistry': return 'कारपेंटर मिस्त्री';
+      case 'rickshaw': return 'ऑटो रिक्शा';
       case 'office': return 'ऑफिस';
       case 'peace': return 'रूहानी शांति';
       case 'travel': return 'रोड ट्रिप सफ़र';
@@ -216,14 +224,10 @@ export default function App() {
   const ActionIcon = actionData.Icon;
   const currentTelemetryInfo = CATEGORY_LIVE_TELEMETRY[activeCategory] || CATEGORY_LIVE_TELEMETRY.truck;
 
-  const handleDownload = (e, song) => {
+  const handleOpenPlaylistUrl = (e, song) => {
     e.stopPropagation();
-    const link = document.createElement('a');
-    link.href = song.audioUrl;
-    link.download = `${song.title} - ${song.artist}.mp3`;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    const url = song.playlistUrl || 'https://music.youtube.com';
+    window.open(url, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -354,7 +358,7 @@ export default function App() {
         <div className="playlist-drawer-backdrop" onClick={() => setIsDrawerOpen(false)}>
           <div className="playlist-drawer-card" onClick={(e) => e.stopPropagation()}>
             <div className="drawer-header">
-              <h3 className="font-bold text-lg text-white">धुन सफर प्लेलिस्ट लाइब्रेरी ({filteredSongs.length} गाने)</h3>
+              <h3 className="font-bold text-lg text-white">धुन सफर गोल्डमाइन प्लेलिस्ट लाइब्रेरी ({filteredSongs.length} गाने)</h3>
               <button className="drawer-close-btn" onClick={() => setIsDrawerOpen(false)}>
                 <X size={20} />
               </button>
@@ -384,18 +388,18 @@ export default function App() {
                     }}
                   >
                     <img src={song.cover} alt={song.title} className="drawer-thumb" />
-                    <div>
+                    <div style={{ flex: 1 }}>
                       <div className="font-semibold text-sm text-white">{song.title}</div>
                       <div className="text-xs text-gray-400">{song.artist} • {song.movie}</div>
                     </div>
 
                     <button 
                       className="download-link-btn" 
-                      onClick={(e) => handleDownload(e, song)}
-                      title="डाउनलोड करें"
+                      onClick={(e) => handleOpenPlaylistUrl(e, song)}
+                      title="यूट्यूब / स्पॉटिफ़ाई प्लेलिस्ट यूआरएल खोलें"
                     >
-                      <Download size={14} />
-                      <span>डाउनलोड</span>
+                      <ExternalLink size={14} />
+                      <span>प्लेलिस्ट खोलें</span>
                     </button>
                   </div>
                 );

@@ -156,7 +156,41 @@ export function playMistryCarpenterSound() {
   noise.stop(now + 0.35);
 }
 
-// 4. Office Sound (Keyboard & Chai Slurp Synth)
+// 4. Auto Rickshaw Two-Stroke Engine Poo-Poo Horn Sound
+export function playRickshawSound() {
+  const ctx = getAudioContext();
+  const now = ctx.currentTime;
+
+  for (let i = 0; i < 2; i++) {
+    const t = now + i * 0.14;
+
+    const osc1 = ctx.createOscillator();
+    const osc2 = ctx.createOscillator();
+    const gain = ctx.createGain();
+
+    osc1.type = 'square';
+    osc2.type = 'sawtooth';
+
+    osc1.frequency.setValueAtTime(540, t);
+    osc2.frequency.setValueAtTime(546, t);
+
+    gain.gain.setValueAtTime(0, t);
+    gain.gain.linearRampToValueAtTime(0.4, t + 0.01);
+    gain.gain.exponentialRampToValueAtTime(0.01, t + 0.1);
+
+    osc1.connect(gain);
+    osc2.connect(gain);
+    gain.connect(ctx.destination);
+
+    osc1.start(t);
+    osc2.start(t);
+
+    osc1.stop(t + 0.1);
+    osc2.stop(t + 0.1);
+  }
+}
+
+// 5. Office Sound (Keyboard & Chai Slurp Synth)
 export function playOfficeSound() {
   const ctx = getAudioContext();
   const now = ctx.currentTime;
@@ -179,7 +213,7 @@ export function playOfficeSound() {
   }
 }
 
-// 5. Spiritual Temple Bell Sound
+// 6. Spiritual Temple Bell Sound
 export function playPeaceBellSound() {
   const ctx = getAudioContext();
   const now = ctx.currentTime;
@@ -204,7 +238,7 @@ export function playPeaceBellSound() {
   });
 }
 
-// 6. Travel Engine Sound
+// 7. Travel Engine Sound
 export function playTravelEngineSound() {
   const ctx = getAudioContext();
   const now = ctx.currentTime;
