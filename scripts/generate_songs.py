@@ -8,12 +8,12 @@ OUTPUT_FILE = "src/data/songs.js"
 CATEGORIES = [
   { 
     "id": "truck", 
-    "name": "हॉर्न ओके प्लीज़ (Truck Driver)", 
+    "name": "ट्रक ड्राइवर (Truck Driver)", 
     "domain": "hornokplease.xyz",
     "siteUrl": "https://hornokplease.xyz",
     "spotifyUrl": "https://open.spotify.com/playlist/2AVjI8Z57bqMJVtU3V9X1Q",
     "ytUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
-    "subtitle": "Highway retro bangers & dhaba vibes • hornokplease.xyz / truckplaylist.vercel.app", 
+    "subtitle": "Highway retro bangers & dhaba vibes", 
     "icon": "Truck" 
   },
   { 
@@ -23,7 +23,7 @@ CATEGORIES = [
     "siteUrl": "https://saloon.wtf",
     "spotifyUrl": "https://open.spotify.com/playlist/2AVjI8Z57bqMJVtU3V9X1Q",
     "ytUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
-    "subtitle": "90s Bollywood saloon hits & चंपी मालिश • saloon.wtf / deluxesalon.in", 
+    "subtitle": "90s Bollywood saloon hits & चंपी मालिश", 
     "icon": "Scissors" 
   },
   { 
@@ -33,7 +33,7 @@ CATEGORIES = [
     "siteUrl": "https://rajumistri.onrender.com",
     "spotifyUrl": "https://open.spotify.com/playlist/2AVjI8Z57bqMJVtU3V9X1Q",
     "ytUrl": "https://music.youtube.com/playlist?list=PLUoQz2ARfFa0",
-    "subtitle": "Desi labor songs & carpenter tools • rajumistri.onrender.com", 
+    "subtitle": "Desi labor songs & carpenter tools", 
     "icon": "Wrench" 
   },
   { 
@@ -43,7 +43,7 @@ CATEGORIES = [
     "siteUrl": "https://90s-nostalgiaindia.netlify.app/auto-rickshaw",
     "spotifyUrl": "https://open.spotify.com/playlist/2AVjI8Z57bqMJVtU3V9X1Q",
     "ytUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
-    "subtitle": "Meter down city street beats & 90s nostalgia • 90s-nostalgiaindia.netlify.app", 
+    "subtitle": "Meter down city street beats & 90s nostalgia", 
     "icon": "Car" 
   },
   { 
@@ -63,7 +63,7 @@ CATEGORIES = [
     "siteUrl": "https://nostalgiahits.in",
     "spotifyUrl": "https://open.spotify.com/playlist/2AVjI8Z57bqMJVtU3V9X1Q",
     "ytUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
-    "subtitle": "Kun Faya Kun, Ghazals & spiritual chimes • nostalgiahits.in", 
+    "subtitle": "Kun Faya Kun, Ghazals & spiritual chimes", 
     "icon": "HeartHandshake" 
   },
   { 
@@ -73,7 +73,7 @@ CATEGORIES = [
     "siteUrl": "https://truckdrivermusic.in",
     "spotifyUrl": "https://open.spotify.com/playlist/2AVjI8Z57bqMJVtU3V9X1Q",
     "ytUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
-    "subtitle": "Safarnama, Indie pop & sunset highway tunes • truckdrivermusic.in", 
+    "subtitle": "Safarnama, Indie pop & sunset highway tunes", 
     "icon": "Compass" 
   }
 ]
