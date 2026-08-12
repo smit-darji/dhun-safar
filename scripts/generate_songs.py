@@ -6,16 +6,78 @@ SONGS_DIR = "public/songs"
 OUTPUT_FILE = "src/data/songs.js"
 
 CATEGORIES = [
-  { "id": "truck", "name": "ट्रक वाला (Truck Driver)", "subtitle": "Highway retro bangers & dhaba vibes • hornokplease.xyz", "icon": "Truck" },
-  { "id": "salon", "name": "डीलक्स सैलून (Barber Salon)", "subtitle": "90s Bollywood saloon hits & चंपी मालिश • saloon.wtf", "icon": "Scissors" },
-  { "id": "mistry", "name": "कारपेंटर मिस्त्री (Wooden Workshop)", "subtitle": "Carpenter tools, saw beats & Raju Mistry hits • rajumistri.onrender.com", "icon": "Wrench" },
-  { "id": "rickshaw", "name": "ऑटो रिक्शा (Auto Rickshaw Driver)", "subtitle": "Auto meter, city street beats & 90s nostalgia", "icon": "Car" },
-  { "id": "office", "name": "ऑफिस (Corporate / Focus)", "subtitle": "Lofi beats, acoustic & chai study dhun", "icon": "Briefcase" },
-  { "id": "peace", "name": "रूहानी शांति (Peace & Sufi)", "subtitle": "Kun Faya Kun, Ghazals & spiritual chimes • nostalgiahits.in", "icon": "HeartHandshake" },
-  { "id": "travel", "name": "रोड ट्रिप सफ़र (Travel)", "subtitle": "Safarnama, Indie pop & sunset highway tunes", "icon": "Compass" }
+  { 
+    "id": "truck", 
+    "name": "हॉर्न ओके प्लीज़ (Truck Driver)", 
+    "domain": "hornokplease.xyz",
+    "siteUrl": "https://hornokplease.xyz",
+    "spotifyUrl": "https://open.spotify.com/playlist/2AVjI8Z57bqMJVtU3V9X1Q",
+    "ytUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "subtitle": "Highway retro bangers & dhaba vibes • hornokplease.xyz / truckplaylist.vercel.app", 
+    "icon": "Truck" 
+  },
+  { 
+    "id": "salon", 
+    "name": "डीलक्स सैलून (Barber Saloon)", 
+    "domain": "saloon.wtf",
+    "siteUrl": "https://saloon.wtf",
+    "spotifyUrl": "https://open.spotify.com/playlist/2AVjI8Z57bqMJVtU3V9X1Q",
+    "ytUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "subtitle": "90s Bollywood saloon hits & चंपी मालिश • saloon.wtf / deluxesalon.in", 
+    "icon": "Scissors" 
+  },
+  { 
+    "id": "mistry", 
+    "name": "राजू मिस्त्री (Wooden Workshop)", 
+    "domain": "rajumistri.onrender.com",
+    "siteUrl": "https://rajumistri.onrender.com",
+    "spotifyUrl": "https://open.spotify.com/playlist/2AVjI8Z57bqMJVtU3V9X1Q",
+    "ytUrl": "https://music.youtube.com/playlist?list=PLUoQz2ARfFa0",
+    "subtitle": "Desi labor songs & carpenter tools • rajumistri.onrender.com", 
+    "icon": "Wrench" 
+  },
+  { 
+    "id": "rickshaw", 
+    "name": "ऑटो रिक्शा (Auto Rickshaw 90s)", 
+    "domain": "90s-nostalgiaindia.netlify.app",
+    "siteUrl": "https://90s-nostalgiaindia.netlify.app/auto-rickshaw",
+    "spotifyUrl": "https://open.spotify.com/playlist/2AVjI8Z57bqMJVtU3V9X1Q",
+    "ytUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "subtitle": "Meter down city street beats & 90s nostalgia • 90s-nostalgiaindia.netlify.app", 
+    "icon": "Car" 
+  },
+  { 
+    "id": "office", 
+    "name": "ऑफिस चाय (Corporate / Focus)", 
+    "domain": "productivityhindi",
+    "siteUrl": "https://truckdrivermusic.in",
+    "spotifyUrl": "https://open.spotify.com/playlist/2AVjI8Z57bqMJVtU3V9X1Q",
+    "ytUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "subtitle": "Lofi beats, acoustic & chai study dhun", 
+    "icon": "Briefcase" 
+  },
+  { 
+    "id": "peace", 
+    "name": "रूहानी शांति (Nostalgia Hits)", 
+    "domain": "nostalgiahits.in",
+    "siteUrl": "https://nostalgiahits.in",
+    "spotifyUrl": "https://open.spotify.com/playlist/2AVjI8Z57bqMJVtU3V9X1Q",
+    "ytUrl": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+    "subtitle": "Kun Faya Kun, Ghazals & spiritual chimes • nostalgiahits.in", 
+    "icon": "HeartHandshake" 
+  },
+  { 
+    "id": "travel", 
+    "name": "रोड ट्रिप सफ़र (Travel Highway)", 
+    "domain": "truckdrivermusic.in",
+    "siteUrl": "https://truckdrivermusic.in",
+    "spotifyUrl": "https://open.spotify.com/playlist/2AVjI8Z57bqMJVtU3V9X1Q",
+    "ytUrl": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+    "subtitle": "Safarnama, Indie pop & sunset highway tunes • truckdrivermusic.in", 
+    "icon": "Compass" 
+  }
 ]
 
-# Authentic Movie & Retro Single Covers
 COVER_ARTWORKS = {
   "ae kash": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=500&q=80",
   "dhoom": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=500&q=80",
@@ -39,11 +101,11 @@ CATEGORY_DEFAULT_COVERS = {
   "travel": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=500&q=80"
 }
 
-YT_PLAYLISTS = {
-  "truck": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
-  "salon": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
-  "mistry": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
-  "rickshaw": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
+SITE_PLAYLISTS = {
+  "mistry": "https://music.youtube.com/playlist?list=PLUoQz2ARfFa0",
+  "salon": "https://open.spotify.com/playlist/2AVjI8Z57bqMJVtU3V9X1Q",
+  "truck": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
+  "rickshaw": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
   "office": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw",
   "peace": "https://music.youtube.com/playlist?list=PLeatb7hupNV_AWUl_7ttbsKeCQh8tF5N4",
   "travel": "https://music.youtube.com/playlist?list=PLTJ1PnzCWyFw"
@@ -70,7 +132,8 @@ def clean_title(filename):
 songs = []
 count = 1
 
-for cat_id in ["truck", "salon", "mistry", "rickshaw", "office", "peace", "travel"]:
+for cat in CATEGORIES:
+    cat_id = cat["id"]
     cat_dir = os.path.join(SONGS_DIR, cat_id)
     if not os.path.exists(cat_dir):
         continue
@@ -80,7 +143,6 @@ for cat_id in ["truck", "salon", "mistry", "rickshaw", "office", "peace", "trave
         audio_url = f"/songs/{cat_id}/{filename}"
         song_id = f"{cat_id[:2]}-{count}"
         
-        # Determine actual cover artwork based on keywords
         cover = CATEGORY_DEFAULT_COVERS.get(cat_id, CATEGORY_DEFAULT_COVERS["truck"])
         title_lower = title.lower()
         for kw, img_url in COVER_ARTWORKS.items():
@@ -96,7 +158,9 @@ for cat_id in ["truck", "salon", "mistry", "rickshaw", "office", "peace", "trave
             "category": cat_id,
             "duration": "5:30",
             "audioUrl": audio_url,
-            "playlistUrl": YT_PLAYLISTS.get(cat_id, YT_PLAYLISTS["truck"]),
+            "playlistUrl": cat.get("ytUrl", SITE_PLAYLISTS.get(cat_id, SITE_PLAYLISTS["truck"])),
+            "spotifyUrl": cat.get("spotifyUrl"),
+            "domain": cat.get("domain"),
             "cover": cover,
             "tags": [cat_id.capitalize(), "Bollywood 90s", "Classic Stream"]
         })

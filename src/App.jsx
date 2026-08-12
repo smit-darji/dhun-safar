@@ -1,16 +1,16 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { CATEGORIES, SONGS } from './data/songs';
-import { 
-  playTruckHorn, 
+import {
+  playTruckHorn,
   playSalonScissorsSound,
-  playMistryCarpenterSound, 
+  playMistryCarpenterSound,
   playRickshawSound,
-  playOfficeSound, 
-  playPeaceBellSound, 
-  playTravelEngineSound 
+  playOfficeSound,
+  playPeaceBellSound,
+  playTravelEngineSound
 } from './utils/hornSound';
-import { 
-  Play, Pause, SkipBack, SkipForward, Shuffle, Repeat, 
+import {
+  Play, Pause, SkipBack, SkipForward, Shuffle, Repeat,
   ExternalLink, ListMusic, Volume2, VolumeX, Search, X, Radio, Scissors, Wrench, Car, Coffee, Bell, Compass, Dices
 } from 'lucide-react';
 
@@ -38,7 +38,7 @@ const CATEGORY_SLOGANS = {
   rickshaw: 'मीटर डाउन 🛺 • 90s ऑटो ड्राइवर सिटी हिट्स (90s-nostalgiaindia.netlify.app)',
   office: 'चाय और कोड • डीडलाइन फोकस ☕ (productivityhindi)',
   peace: 'गंगा तेरा पानी अमृत • रूहानी शांति 🕉️ (nostalgiahits.in)',
-  travel: 'लंबी सड़क • हाइवे Sunset ड्राइव 🛣️ (truckdrivermusic.in)'
+  travel: 'लंबी सड़क • हाइवे Sunset ड्राइव (truckdrivermusic.in)'
 };
 
 const CATEGORY_LIVE_TELEMETRY = {
@@ -62,7 +62,7 @@ export default function App() {
   const [isShuffle, setIsShuffle] = useState(true);
   const [isRepeat, setIsRepeat] = useState(false);
   const [liveCount, setLiveCount] = useState(28450);
-  const [clockTime, setClockTime] = useState('11:18 am');
+  const [clockTime, setClockTime] = useState('11:27 am');
 
   const audioRef = useRef(null);
 
@@ -93,10 +93,12 @@ export default function App() {
     return () => clearInterval(interval);
   }, [activeCategory]);
 
+  const activeCatMeta = CATEGORIES.find((c) => c.id === activeCategory) || CATEGORIES[0];
+
   const filteredSongs = SONGS.filter((s) => {
     const matchesCat = activeCategory === 'all' || s.category === activeCategory;
     const matchesSearch = s.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          s.artist.toLowerCase().includes(searchQuery.toLowerCase());
+      s.artist.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCat && matchesSearch;
   });
 
@@ -216,13 +218,13 @@ export default function App() {
 
   const getCategoryTitleHindi = () => {
     switch (activeCategory) {
-      case 'truck': return 'ट्रक वाला';
-      case 'salon': return 'डीलक्स सैलून';
-      case 'mistry': return 'कारपेंटर मिस्त्री';
-      case 'rickshaw': return 'ऑटो रिक्शा';
-      case 'office': return 'ऑफिस';
-      case 'peace': return 'रूहानी शांति';
-      case 'travel': return 'रोड ट्रिप सफ़र';
+      case 'truck': return 'ट्रक वाला (Horn OK Please)';
+      case 'salon': return 'डीलक्स सैलून (Barber Saloon)';
+      case 'mistry': return 'राजू मिस्त्री (Raju Mistry)';
+      case 'rickshaw': return 'ऑटो रिक्शा (90s Auto)';
+      case 'office': return 'ऑफिस चाय (Corporate Focus)';
+      case 'peace': return 'रूहानी शांति (Nostalgia Hits)';
+      case 'travel': return 'रोड ट्रिप सफ़र (Highway Travel)';
       default: return 'धुन सफर';
     }
   };
@@ -232,9 +234,7 @@ export default function App() {
   const currentTelemetryInfo = CATEGORY_LIVE_TELEMETRY[activeCategory] || CATEGORY_LIVE_TELEMETRY.truck;
   const currentVideoSrc = CATEGORY_VIDEOS[activeCategory];
 
-  const handleOpenPlaylistUrl = (e, song) => {
-    e.stopPropagation();
-    const url = song.playlistUrl || 'https://music.youtube.com';
+  const handleOpenExternal = (url) => {
     window.open(url, '_blank', 'noopener,noreferrer');
   };
 
@@ -260,12 +260,12 @@ export default function App() {
           src={currentVideoSrc}
         />
       ) : (
-        <div 
-          className="hero-bg-image" 
+        <div
+          className="hero-bg-image"
           style={{ backgroundImage: `url(${CATEGORY_BACKGROUNDS[activeCategory] || CATEGORY_BACKGROUNDS.truck})` }}
         />
       )}
-      
+
       <div className="hero-gradient-overlay" />
 
       {/* Top Header Bar */}
@@ -278,6 +278,26 @@ export default function App() {
         </div>
 
         <div className="top-right-group">
+          {/* External Site Playlist Quick Buttons */}
+          <div style={{ display: 'flex', gap: '0.4rem' }}>
+            <button
+              className="download-link-btn"
+              onClick={() => handleOpenExternal(activeCatMeta.spotifyUrl || 'https://open.spotify.com')}
+              title="Spotify Official Playlist"
+            >
+              <span>Spotify</span>
+              <ExternalLink size={12} />
+            </button>
+            <button
+              className="download-link-btn"
+              onClick={() => handleOpenExternal(activeCatMeta.ytUrl || 'https://music.youtube.com')}
+              title="YouTube Music Official Playlist"
+            >
+              <span>YT Music</span>
+              <ExternalLink size={12} />
+            </button>
+          </div>
+
           <div className="category-nav-pills">
             {CATEGORIES.map((cat) => (
               <button
@@ -313,10 +333,10 @@ export default function App() {
       <footer className="bottom-player-area">
         <div className="player-capsule-bar">
           <div className="player-left-thumb-group">
-            <img 
-              src={currentSong ? currentSong.cover : ''} 
-              alt={currentSong ? currentSong.title : ''} 
-              className={`player-thumb-img ${isPlaying ? 'player-thumb-spinning' : ''}`} 
+            <img
+              src={currentSong ? currentSong.cover : ''}
+              alt={currentSong ? currentSong.title : ''}
+              className={`player-thumb-img ${isPlaying ? 'player-thumb-spinning' : ''}`}
             />
             <div className="player-song-details">
               <div className="player-song-title">{currentSong ? currentSong.title : 'गाना चुनें'}</div>
@@ -339,7 +359,7 @@ export default function App() {
 
           <div className="player-center-controls">
             {/* Random Shuffle Button */}
-            <button 
+            <button
               className="capsule-ctrl-btn active"
               onClick={handleRandomShuffle}
               title="रैंडम शफ़ल गाना चलाएं 🎲"
@@ -351,8 +371,8 @@ export default function App() {
               <SkipBack size={18} />
             </button>
 
-            <button 
-              className="capsule-play-main-btn" 
+            <button
+              className="capsule-play-main-btn"
               onClick={() => setIsPlaying(!isPlaying)}
               title={isPlaying ? 'रोकें' : 'चलाएं'}
             >
@@ -363,8 +383,8 @@ export default function App() {
               <SkipForward size={18} />
             </button>
 
-            <button 
-              className="capsule-ctrl-btn" 
+            <button
+              className="capsule-ctrl-btn"
               onClick={() => setIsDrawerOpen(true)}
               title="प्लेलिस्ट लाइब्रेरी खोलें"
             >
@@ -379,7 +399,9 @@ export default function App() {
         <div className="playlist-drawer-backdrop" onClick={() => setIsDrawerOpen(false)}>
           <div className="playlist-drawer-card" onClick={(e) => e.stopPropagation()}>
             <div className="drawer-header">
-              <h3 className="font-bold text-lg text-white">धुन सफर गोल्डमाइन प्लेलिस्ट लाइब्रेरी ({filteredSongs.length} गाने)</h3>
+              <h3 className="font-bold text-lg text-white">
+                {activeCatMeta.name} गोल्डमाइन प्लेलिस्ट ({filteredSongs.length} गाने)
+              </h3>
               <button className="drawer-close-btn" onClick={() => setIsDrawerOpen(false)}>
                 <X size={20} />
               </button>
@@ -414,13 +436,16 @@ export default function App() {
                       <div className="text-xs text-gray-400">{song.artist} • {song.movie}</div>
                     </div>
 
-                    <button 
-                      className="download-link-btn" 
-                      onClick={(e) => handleOpenPlaylistUrl(e, song)}
+                    <button
+                      className="download-link-btn"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleOpenExternal(song.playlistUrl);
+                      }}
                       title="यूट्यूब / स्पॉटिफ़ाई प्लेलिस्ट यूआरएल खोलें"
                     >
                       <ExternalLink size={14} />
-                      <span>प्लेलिस्ट यूआरएल</span>
+                      <span>{song.domain || 'प्लेलिस्ट यूआरएल'}</span>
                     </button>
                   </div>
                 );
